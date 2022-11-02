@@ -1,0 +1,74 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity counter_testbench is
+	generic (
+			PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50   -- Clock signal in MHZ
+	);
+end entity counter_testbench;
+
+architecture rtl of counter_testbench is
+
+signal clock			: std_ulogic := '0';
+signal reset		 	: std_ulogic := '0';
+signal next_pwmstep	: std_ulogic := '0';
+signal pwm_step 		:std_ulogic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0) := (others => '0');
+
+
+	component counter is
+	generic (
+		MAX_VALUE	: integer := 512  -- Number of Steps
+	);
+	port (
+		clock 		: in  	std_ulogic;
+		reset			: in 		std_ulogic;
+
+		enable		: in   	std_ulogic;
+		count			: out   	std_ulogic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0)
+    );
+	end component counter;
+
+begin
+
+	gen_reset : process
+	begin
+		reset <= '1';
+		wait for 40 ns;
+		reset <= '0';
+		wait;
+	end process gen_reset;
+	
+	gen_clock : process
+	begin
+    clock <= '1';
+    wait for 10 ns;
+    clock <= '0';
+    wait for 10 ns;
+	end process gen_clock;
+
+	gen_enable : process
+	begin
+		next_pwmstep <= '1';
+		wait for 20 ns;
+		next_pwmstep <= '0';
+		wait for 400 ns;
+	end process gen_enable;
+
+	cnt_test : counter -- counter for every pwm step
+		generic map(
+			MAX_VALUE 	=> PWM_STEPS
+		)
+		port map(
+			clock 	=> clock,
+			reset		=> reset,
+			enable	=> next_pwmstep,
+			count		=> pwm_step
+		 );		
+	
+
+end architecture rtl;
+

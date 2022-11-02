@@ -1,0 +1,2499 @@
+m255
+K3
+z0
+13
+cModel Technology
+dC:\altera\14.0
+Eamp_div
+Z0 w1534536741
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/altera/13.0sp1/Wavegenerator/modelsim
+Z4 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd
+Z5 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd
+l0
+L42
+VFNTNcnSECM:A;?dLi2A>C0
+!s100 QaaD>6^?2L>2lLSO@4=kh0
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1542534411
+!i10b 1
+Z8 !s108 1542534411.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd|
+Z10 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Asyn
+R1
+R2
+DEx4 work 7 amp_div 0 22 FNTNcnSECM:A;?dLi2A>C0
+l82
+L55
+Vf6ZgC6NYZn_bjMcA]VC383
+!s100 oZ[1i2LH:>@QMK_5^K]G01
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Eamp_mul
+Z13 w1534538955
+R1
+R2
+R3
+Z14 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd
+Z15 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd
+l0
+L42
+VRbY1Wg;:YBC^`c3TBP`4O1
+!s100 BA<29W665^X@GGfTZ:6CF3
+R6
+32
+Z16 !s110 1542534410
+!i10b 1
+Z17 !s108 1542534410.000000
+Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd|
+Z19 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 7 amp_mul 0 22 RbY1Wg;:YBC^`c3TBP`4O1
+l79
+L54
+Vn9FDWC^FEJS;VzMf[8L2U1
+!s100 R69W4fA4fk7m5cXmA4[ib2
+R6
+32
+R16
+!i10b 1
+R17
+R18
+R19
+!i113 1
+R11
+R12
+Ecounter
+Z20 w1534681870
+Z21 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z22 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+R1
+R2
+R3
+Z23 8C:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd
+Z24 FC:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd
+l0
+L19
+V39=?9;LH3QJ:dO=NaWQZV3
+!s100 [EYdD[;TmIJG9i^0;9jHc0
+R6
+32
+Z25 !s110 1542534407
+!i10b 1
+Z26 !s108 1542534407.000000
+Z27 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd|
+Z28 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 7 counter 0 22 39=?9;LH3QJ:dO=NaWQZV3
+l41
+L35
+V8kDlV@^lTBf95342bSRCZ1
+!s100 N_9ZzMWH9PeibMBdU19I@2
+R6
+32
+R25
+!i10b 1
+R26
+R27
+R28
+!i113 1
+R11
+R12
+Ecounter_testbench
+Z29 w1533932253
+R21
+R22
+R1
+R2
+R3
+Z30 8C:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd
+Z31 FC:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd
+l0
+L7
+VB^gaZVbBGgLc<4XcBR6Ve1
+!s100 Z]TWo_YDeTcV7CEN1@E8[1
+R6
+32
+Z32 !s110 1542534408
+!i10b 1
+R26
+Z33 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd|
+Z34 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 17 counter_testbench 0 22 B^gaZVbBGgLc<4XcBR6Ve1
+l35
+L14
+VUa=hcU>728b<T2F=hL1fZ3
+!s100 mRQMBDB6zADSH7W3gA7ZJ0
+R6
+32
+R32
+!i10b 1
+R26
+R33
+R34
+!i113 1
+R11
+R12
+Ecustom_ram_1024
+Z35 w1534972588
+R1
+R2
+R3
+Z36 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd
+Z37 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd
+l0
+L42
+V^_B0iXMl`_4=H[m>0=f;l2
+!s100 aMW^hG7YOV=MPm0J>FbaG3
+R6
+32
+R32
+!i10b 1
+Z38 !s108 1542534408.000000
+Z39 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd|
+Z40 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 15 custom_ram_1024 0 22 ^_B0iXMl`_4=H[m>0=f;l2
+l96
+L56
+V@0d;NGg1JPkTS4^jCeN`A2
+!s100 ^A^H4aAo2ciEK6935R3>71
+R6
+32
+R32
+!i10b 1
+R38
+R39
+R40
+!i113 1
+R11
+R12
+Ecustom_ram_512
+Z41 w1534972618
+R1
+R2
+R3
+Z42 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd
+Z43 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd
+l0
+L42
+VR80U=;ml`36IDADgVXFna0
+!s100 N=QYHU0GYQD91Rkbonbad0
+R6
+32
+R32
+!i10b 1
+R38
+Z44 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd|
+Z45 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 14 custom_ram_512 0 22 R80U=;ml`36IDADgVXFna0
+l96
+L56
+V0VE;a1PSj?[S5>;eMd3Wm1
+!s100 Jm_n<>1X6JG?M9j22ed?c3
+R6
+32
+R32
+!i10b 1
+R38
+R44
+R45
+!i113 1
+R11
+R12
+Ediv_100
+Z46 w1542537151
+R21
+R22
+R1
+R2
+R3
+Z47 8C:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd
+Z48 FC:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd
+l0
+L6
+V6_zn:JFlPZ^[>2mL4D8X82
+!s100 0@KYJ=`EP7n7Rf1jIo2jm1
+R6
+32
+Z49 !s110 1542537168
+!i10b 1
+Z50 !s108 1542537168.000000
+Z51 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd|
+Z52 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 7 div_100 0 22 6_zn:JFlPZ^[>2mL4D8X82
+l22
+L17
+VI`L^Yg5OSeRHL4DLc_5QZ0
+!s100 ;M0XmKJZ2VHjb:@Sb4U5<3
+R6
+32
+R49
+!i10b 1
+R50
+R51
+R52
+!i113 1
+R11
+R12
+Ediv_mapping_1024
+Z53 w1542550015
+R21
+R22
+R1
+R2
+R3
+Z54 8C:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd
+Z55 FC:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd
+l0
+L6
+VFmABEeTl3lW_P4aN9CT>k1
+!s100 :0F@YUoA;5[=e4Fo74hE_3
+R6
+32
+Z56 !s110 1542550020
+!i10b 1
+Z57 !s108 1542550020.000000
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd|
+Z59 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 16 div_mapping_1024 0 22 FmABEeTl3lW_P4aN9CT>k1
+l24
+L17
+VcZ?T1<g>8NLHCQ6i2nLlg0
+!s100 z_Yj:0g3h3UZj`4>fQ]gI3
+R6
+32
+R56
+!i10b 1
+R57
+R58
+R59
+!i113 1
+R11
+R12
+Ediv_step
+Z60 w1541541113
+R21
+R22
+R1
+R2
+R3
+Z61 8C:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd
+Z62 FC:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd
+l0
+L6
+VkW^CPLUITK0EnK0cPTdl33
+!s100 6Z0ccgLfG2<?Jb5Qf2znN2
+R6
+32
+Z63 !s110 1542534413
+!i10b 1
+Z64 !s108 1542534413.000000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd|
+Z66 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 8 div_step 0 22 kW^CPLUITK0EnK0cPTdl33
+l23
+L20
+VzgWA9@[L=GbF`C9^I?VFA1
+!s100 759Y@`0>G2LOm@7MaRRbb3
+R6
+32
+R63
+!i10b 1
+R64
+R65
+R66
+!i113 1
+R11
+R12
+Pfunction_pkg
+R22
+R1
+R2
+Z67 w1536873638
+R3
+Z68 8C:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd
+Z69 FC:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd
+l0
+L7
+V?SIn;gnf[Vm9;:<E^KJ6J1
+!s100 0nDPSP]hT:e4G2YTF1CaO0
+R6
+32
+b1
+R7
+!i10b 1
+R8
+Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd|
+Z71 !s107 C:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd|
+!i113 1
+R11
+R12
+Bbody
+Z72 DPx4 work 12 function_pkg 0 22 ?SIn;gnf[Vm9;:<E^KJ6J1
+R22
+R1
+R2
+l0
+L14
+VXHah]WBDnoEXEMnP2oeNl3
+!s100 <B54dcc_SWMXZP>72M?^R2
+R6
+32
+R7
+!i10b 1
+R8
+R70
+R71
+!i113 1
+R11
+R12
+Egain_unit
+Z73 w1542537162
+R21
+R22
+R1
+R2
+R3
+Z74 8C:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd
+Z75 FC:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd
+l0
+L6
+VLePEM54V3?T[@B;O0?Xn=1
+!s100 4;``Y^lj:gckJgck;ElX=2
+R6
+32
+R49
+!i10b 1
+R50
+Z76 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd|
+Z77 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 9 gain_unit 0 22 LePEM54V3?T[@B;O0?Xn=1
+l71
+L21
+VG8^CQWbd0Agmjf;7XQfG83
+!s100 aQXZ>D<6?fEP_DJMZWfN70
+R6
+32
+R49
+!i10b 1
+R50
+R76
+R77
+!i113 1
+R11
+R12
+Elast_step_calc
+Z78 w1535205512
+R21
+R22
+R1
+R2
+R3
+Z79 8C:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd
+Z80 FC:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd
+l0
+L6
+V9dJ>dX93nBFK3VnI>3JOS3
+!s100 3;l:K=_0Y@8I9XNdBU5z`1
+R6
+32
+R16
+!i10b 1
+R17
+Z81 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd|
+Z82 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 14 last_step_calc 0 22 9dJ>dX93nBFK3VnI>3JOS3
+l51
+L20
+V[V]W_9>CV>2Tk6<Zg<eWB0
+!s100 62;D]Q2nQN:mZdFFo@LNG1
+R6
+32
+R16
+!i10b 1
+R17
+R81
+R82
+!i113 1
+R11
+R12
+Emapping_div
+Z83 w1534532661
+R1
+R2
+R3
+Z84 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd
+Z85 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd
+l0
+L42
+VK>G772eFi7UO6KVP5YWi31
+!s100 oDz[M;WF@[To2aUaoM]Rh3
+R6
+32
+R7
+!i10b 1
+R8
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd|
+Z87 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 11 mapping_div 0 22 K>G772eFi7UO6KVP5YWi31
+l82
+L55
+VDf:67?>dAzE1=Ec`ATj9B2
+!s100 ]F_mNcl?b[hP^c]DNaEa<2
+R6
+32
+R7
+!i10b 1
+R8
+R86
+R87
+!i113 1
+R11
+R12
+Emapping_unit
+Z88 w1542550016
+R21
+R22
+R1
+R2
+R3
+Z89 8C:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd
+Z90 FC:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd
+l0
+L6
+V_Q>ig6ZKXCYz3<4kek6_Z3
+!s100 W26lF56zjk4bOjnaTPnfl3
+R6
+32
+R56
+!i10b 1
+R57
+Z91 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd|
+Z92 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 12 mapping_unit 0 22 _Q>ig6ZKXCYz3<4kek6_Z3
+l82
+L21
+V=1cS4@S]PP7K1Ri0o?KAl0
+!s100 z`?7Tjnfd62bUg4NU6G^Z0
+R6
+32
+R56
+!i10b 1
+R57
+R91
+R92
+!i113 1
+R11
+R12
+Emul_period
+Z93 w1535226125
+R1
+R2
+R3
+Z94 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd
+Z95 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd
+l0
+L42
+V0WMZ0GceW^?PKRf_4SEQO2
+!s100 B]86<O>W2Pd>LERg`YN;K3
+R6
+32
+R7
+!i10b 1
+R17
+Z96 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd|
+Z97 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 10 mul_period 0 22 0WMZ0GceW^?PKRf_4SEQO2
+l79
+L54
+VBgR4gN<^2NkFnJ;R`39IE3
+!s100 PRzQJ[hDJB]0YzMSYl@;<0
+R6
+32
+R7
+!i10b 1
+R17
+R96
+R97
+!i113 1
+R11
+R12
+Emul_pwm
+Z98 w1534289247
+R1
+R2
+R3
+Z99 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd
+Z100 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd
+l0
+L42
+VDYZg_i:FO4d8S`n7h8bPJ3
+!s100 >TmbGbTAL6KXJ=FnlJ=S=3
+R6
+32
+R32
+!i10b 1
+R38
+Z101 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd|
+Z102 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 7 mul_pwm 0 22 DYZg_i:FO4d8S`n7h8bPJ3
+l79
+L54
+VU6EP>K:>CUkDnno[=0NI31
+!s100 LWV=h>mkad9_@?N52:U1A1
+R6
+32
+R32
+!i10b 1
+R38
+R101
+R102
+!i113 1
+R11
+R12
+Eperiod_mul
+Z103 w1535228457
+R21
+R22
+R1
+R2
+R3
+Z104 8C:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd
+Z105 FC:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd
+l0
+L6
+V]b2n2=i]<^AnDgHhh3mMC3
+!s100 T8[?JoS;EQd6ReTT6jajo1
+R6
+32
+R63
+!i10b 1
+R64
+Z106 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd|
+Z107 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 10 period_mul 0 22 ]b2n2=i]<^AnDgHhh3mMC3
+l33
+L17
+Vm^de_o<85cYHmN^cBE<K;1
+!s100 U5Te8nHR:8@oCP@6J`15e3
+R6
+32
+R63
+!i10b 1
+R64
+R106
+R107
+!i113 1
+R11
+R12
+Eperiod_rom_s_1024_f_100
+Z108 w1535151154
+R1
+R2
+R3
+Z109 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd
+Z110 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd
+l0
+L42
+VbfbOJNARoMBMV^SXfiXjg2
+!s100 S>gKn7bi7_XmNgd?VVL1T2
+R6
+32
+Z111 !s110 1542534409
+!i10b 1
+Z112 !s108 1542534409.000000
+Z113 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd|
+Z114 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 23 period_rom_s_1024_f_100 0 22 bfbOJNARoMBMV^SXfiXjg2
+l81
+L52
+V<H=Q;7N<@=T3gYSE9]0`82
+!s100 SbXT731gYI<l9WCf@Kb`M3
+R6
+32
+R111
+!i10b 1
+R112
+R113
+R114
+!i113 1
+R11
+R12
+Eperiod_rom_s_1024_f_350
+Z115 w1534973310
+R1
+R2
+R3
+Z116 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd
+Z117 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd
+l0
+L42
+VF_n2L>AedSUNgn[jjh27k3
+!s100 `c4hfMk^SW]iAI3k[_Y102
+R6
+32
+R111
+!i10b 1
+R112
+Z118 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd|
+Z119 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 23 period_rom_s_1024_f_350 0 22 F_n2L>AedSUNgn[jjh27k3
+l81
+L52
+V?[hfGi`ORRl1lfWKXaD>c2
+!s100 ZM5?B4EgC`cOG>[3D8jYM0
+R6
+32
+R111
+!i10b 1
+R112
+R118
+R119
+!i113 1
+R11
+R12
+Eperiod_rom_s_1024_f_50
+Z120 w1534972846
+R1
+R2
+R3
+Z121 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd
+Z122 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd
+l0
+L42
+VQAYAm=b@@cF``P><RW8bF0
+!s100 ><`F[kO=<9PD61BHd^bdG3
+R6
+32
+R111
+!i10b 1
+R112
+Z123 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd|
+Z124 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 22 period_rom_s_1024_f_50 0 22 QAYAm=b@@cF``P><RW8bF0
+l81
+L52
+VUe`9CBHYf?z?O4zBl`cFW0
+!s100 ;LKoEWm5F1EZc[APYPSE=0
+R6
+32
+R111
+!i10b 1
+R112
+R123
+R124
+!i113 1
+R11
+R12
+Eperiod_rom_s_512_f_100
+Z125 w1534972867
+R1
+R2
+R3
+Z126 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd
+Z127 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd
+l0
+L42
+V`D2]A1e`?=?<@P7do55Jg1
+!s100 m`L=X[=N4PK=Mz><^:J`Z3
+R6
+32
+R111
+!i10b 1
+R38
+Z128 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd|
+Z129 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 22 period_rom_s_512_f_100 0 22 `D2]A1e`?=?<@P7do55Jg1
+l81
+L52
+VS]?>648i^`;SS4UcRLgJ60
+!s100 mEBIJ67FQ14aK0kTU?bAj2
+R6
+32
+R111
+!i10b 1
+R38
+R128
+R129
+!i113 1
+R11
+R12
+Eperiod_rom_s_512_f_350
+Z130 w1534972895
+R1
+R2
+R3
+Z131 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd
+Z132 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd
+l0
+L42
+VdADo0Yl@=ODnIGQ:W317T0
+!s100 F6l^Q>cmY2IbbR<^P_AMT0
+R6
+32
+R111
+!i10b 1
+R112
+Z133 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd|
+Z134 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 22 period_rom_s_512_f_350 0 22 dADo0Yl@=ODnIGQ:W317T0
+l81
+L52
+V]V]7ah`GOfHmgm?h0MOAJ1
+!s100 RDDoGMK4N76@GgM22B]^H0
+R6
+32
+R111
+!i10b 1
+R112
+R133
+R134
+!i113 1
+R11
+R12
+Eperiod_rom_s_512_f_50
+Z135 w1534971614
+R1
+R2
+R3
+Z136 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd
+Z137 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd
+l0
+L42
+V_NmXkf>Rd[GYIUHG6XeTz0
+!s100 49VFF8f_RhFXR?X^z@@bA0
+R6
+32
+R32
+!i10b 1
+R38
+Z138 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd|
+Z139 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 21 period_rom_s_512_f_50 0 22 _NmXkf>Rd[GYIUHG6XeTz0
+l81
+L52
+V6_6bU7bC[hj1KMCe5gm^[0
+!s100 V``9:Em>L`;O?db3_zH_@0
+R6
+32
+R32
+!i10b 1
+R38
+R138
+R139
+!i113 1
+R11
+R12
+Ephase_lut_1024
+Z140 w1534973101
+R1
+R2
+R3
+Z141 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd
+Z142 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd
+l0
+L42
+V@]1?e71LK?l1:7m76FeMe2
+!s100 RgbSQJa`RXE19`;33Rm=;1
+R6
+32
+Z143 !s110 1542534412
+!i10b 1
+Z144 !s108 1542534412.000000
+Z145 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd|
+Z146 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 14 phase_lut_1024 0 22 @]1?e71LK?l1:7m76FeMe2
+l81
+L52
+VjH_S7KVDdJ1c1cNMg7U^z1
+!s100 FXo]O>hW^;4gPGJi5;BoC1
+R6
+32
+R143
+!i10b 1
+R144
+R145
+R146
+!i113 1
+R11
+R12
+Ephase_lut_512
+Z147 w1534973150
+R1
+R2
+R3
+Z148 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd
+Z149 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd
+l0
+L42
+V<_=j_gAndXUWBX0zDb6fG0
+!s100 Xe3O0z4nGiCQW4JCjU:cA3
+R6
+32
+R143
+!i10b 1
+R144
+Z150 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd|
+Z151 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 13 phase_lut_512 0 22 <_=j_gAndXUWBX0zDb6fG0
+l81
+L52
+VReXAAS4nP=zF3YS0o02hZ2
+!s100 EdlX;kEU5CEXUgL_kdJ4I2
+R6
+32
+R143
+!i10b 1
+R144
+R150
+R151
+!i113 1
+R11
+R12
+Epll
+Z152 w1533991188
+R1
+R2
+R3
+Z153 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd
+Z154 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd
+l0
+L42
+Vl@MecHc[Pn8Z[cXi[A[D53
+!s100 H?[1A]^l06dGe;]OFPmiQ3
+R6
+32
+R111
+!i10b 1
+R112
+Z155 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd|
+Z156 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 3 pll 0 22 l@MecHc[Pn8Z[cXi[A[D53
+l142
+L55
+VbbczVJUl:L^2AG3W@cz>c2
+!s100 BQEU68Ql1T53[Dne4@Yc43
+R6
+32
+R111
+!i10b 1
+R112
+R155
+R156
+!i113 1
+R11
+R12
+Epll_100
+Z157 w1535109633
+R1
+R2
+R3
+Z158 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd
+Z159 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd
+l0
+L42
+VCz]M?>Mh@YK2XEjH6JiIH3
+!s100 MlI6eUT1CWO2YV?eT]9NL1
+R6
+32
+R63
+!i10b 1
+R64
+Z160 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd|
+Z161 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 7 pll_100 0 22 Cz]M?>Mh@YK2XEjH6JiIH3
+l130
+L53
+V29JMg]kgBQLOWi4_8Umi]1
+!s100 =F;PRNTU7394Q3YRzCzYQ1
+R6
+32
+R63
+!i10b 1
+R64
+R160
+R161
+!i113 1
+R11
+R12
+Epll_350
+Z162 w1535109800
+R1
+R2
+R3
+Z163 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd
+Z164 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd
+l0
+L42
+VT;0em5^z1eM59BZ6[3hiI1
+!s100 HG^@51M6g]11ejAH2ZF3U3
+R6
+32
+R63
+!i10b 1
+R64
+Z165 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd|
+Z166 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 7 pll_350 0 22 T;0em5^z1eM59BZ6[3hiI1
+l130
+L53
+V2bBgi4PGHBkm1H]:67FC53
+!s100 k>218nER2Q]e_fM4cdog11
+R6
+32
+R63
+!i10b 1
+R64
+R165
+R166
+!i113 1
+R11
+R12
+Epll_50
+Z167 w1535123173
+R1
+R2
+R3
+Z168 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd
+Z169 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd
+l0
+L42
+VPBJ<`YDTa3L8V7a3V7YV=2
+!s100 UjE5bd=khjU;=0J85OJAa3
+R6
+32
+R63
+!i10b 1
+R64
+Z170 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd|
+Z171 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 6 pll_50 0 22 PBJ<`YDTa3L8V7a3V7YV=2
+l136
+L54
+VV3o7PZ9U0VVLNTIc6bhRC2
+!s100 Ee6<SgI0MXSA0lRdS2POD1
+R6
+32
+R63
+!i10b 1
+R64
+R170
+R171
+!i113 1
+R11
+R12
+Epwm_calculator
+Z172 w1535130871
+R21
+R22
+R1
+R2
+R3
+Z173 8C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd
+Z174 FC:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd
+l0
+L6
+VH:P6eOD8M@:n6^I=zd?CT0
+!s100 g0QP;kTEIz2]cUGhlK<522
+R6
+32
+R16
+!i10b 1
+R17
+Z175 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd|
+Z176 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 14 pwm_calculator 0 22 H:P6eOD8M@:n6^I=zd?CT0
+l116
+L31
+V1z>SAF1;z_V_B<NEWnRaz2
+!s100 l8>ckODC54U0Q@`UJ4:DQ2
+R6
+32
+R16
+!i10b 1
+R17
+R175
+R176
+!i113 1
+R11
+R12
+Epwm_calculator_testbench
+Z177 w1534611245
+R21
+R22
+R1
+R2
+R3
+Z178 8C:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd
+Z179 FC:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd
+l0
+L6
+VUUehDe[CU[7X06gmVdNd:3
+!s100 BO?RO1=MN?=4Ra[?chZ9R1
+R6
+32
+R16
+!i10b 1
+R17
+Z180 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd|
+Z181 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 24 pwm_calculator_testbench 0 22 UUehDe[CU[7X06gmVdNd:3
+l61
+L20
+VS>dW6g1TX<M`>?O>US<^;3
+!s100 gf0B3f?2hNAIj_1gT[QAK3
+R6
+32
+R16
+!i10b 1
+R17
+R180
+R181
+!i113 1
+R11
+R12
+Epwm_generator
+Z182 w1542551815
+R21
+R22
+R1
+R2
+R3
+Z183 8C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd
+Z184 FC:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd
+l0
+L6
+VB0^S_OQRmB[@1iC4``<OZ2
+!s100 =f8002DZ7I4QoNBJOU0G53
+R6
+32
+Z185 !s110 1542552006
+!i10b 1
+Z186 !s108 1542552006.000000
+Z187 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd|
+Z188 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 13 pwm_generator 0 22 B0^S_OQRmB[@1iC4``<OZ2
+l63
+L29
+VTa63?FPd>5cNd?W]JWOaD3
+!s100 1^ZiLZZ1ALQEifOe6Aj[91
+R6
+32
+R185
+!i10b 1
+R186
+R187
+R188
+!i113 1
+R11
+R12
+Epwm_generator_testbench
+Z189 w1541754256
+R21
+R22
+R1
+R2
+R3
+Z190 8C:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd
+Z191 FC:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd
+l0
+L6
+VSPAF:K6>]hF6;]U<GJZ8E0
+!s100 LVVAI]l3;0Y]BJH7kT0Bo0
+R6
+32
+R7
+!i10b 1
+R8
+Z192 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd|
+Z193 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 23 pwm_generator_testbench 0 22 SPAF:K6>]hF6;]U<GJZ8E0
+l60
+L19
+VO?K>SbZK0MbZ4LfYaQ^j41
+!s100 ]<SSm4gAJChYi>I>3TQ<>0
+R6
+32
+R7
+!i10b 1
+R8
+R192
+R193
+!i113 1
+R11
+R12
+Epwm_testbench
+Z194 w1533932254
+R21
+R22
+R1
+R2
+R3
+Z195 8C:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd
+Z196 FC:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd
+l0
+L7
+VRTHG84TjeeJFUXJza1b[X0
+!s100 Yd]7GiAKA]_LSNGQA9K1A1
+R6
+32
+R25
+!i10b 1
+R26
+Z197 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd|
+Z198 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 13 pwm_testbench 0 22 RTHG84TjeeJFUXJza1b[X0
+l43
+L14
+VV@NRfj1o;^ZTDoToPfnRd0
+!s100 ][C=^cUM_?c<ZgToLk@C43
+R6
+32
+R25
+!i10b 1
+R26
+R197
+R198
+!i113 1
+R11
+R12
+Erect_generator
+Z199 w1534776128
+R21
+R22
+R1
+R2
+R3
+Z200 8C:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd
+Z201 FC:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd
+l0
+L7
+Vg8gD7UiJU6`]kC7KF:_c;0
+!s100 ^dd5>hIH?admX?5o0L8R`1
+R6
+32
+R32
+!i10b 1
+R38
+Z202 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd|
+Z203 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 14 rect_generator 0 22 g8gD7UiJU6`]kC7KF:_c;0
+l24
+L19
+V@zdk?2Pl4N?<2>?=h5Kjj0
+!s100 OSTJ_Ra3eP[mim[:A^Ll^1
+R6
+32
+R32
+!i10b 1
+R38
+R202
+R203
+!i113 1
+R11
+R12
+Erom_reader
+Z204 w1535234386
+R72
+R21
+R22
+R1
+R2
+R3
+Z205 8C:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd
+Z206 FC:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd
+l0
+L9
+VF@Nn]6aD0OjSIe53le>B=0
+!s100 g6_ZDBL5XQWX]?]H5_R<c2
+R6
+32
+R32
+!i10b 1
+R38
+Z207 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd|
+Z208 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 10 rom_reader 0 22 F@Nn]6aD0OjSIe53le>B=0
+l284
+L41
+VT@CgAUoEoAW24iJL3^1Jn2
+!s100 E=jPSbfHHAXDiXCcY4>bb2
+R6
+32
+R32
+!i10b 1
+R38
+R207
+R208
+!i113 1
+R11
+R12
+Erom_reader_testbench
+Z209 w1535359073
+R21
+R22
+R1
+R2
+R3
+Z210 8C:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd
+Z211 FC:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd
+l0
+L8
+VjC^MmXL:XLhl1m6nQaT2D1
+!s100 ?MzTM@2lYHRZ[WKSi3oWX2
+R6
+32
+R32
+!i10b 1
+R38
+Z212 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd|
+Z213 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 20 rom_reader_testbench 0 22 jC^MmXL:XLhl1m6nQaT2D1
+l83
+L19
+V<oFXM8?CEOX?DY6f14:1U1
+!s100 Xfm1@E<^A9RahgO0]24iY2
+R6
+32
+R32
+!i10b 1
+R38
+R212
+R213
+!i113 1
+R11
+R12
+Esawtooth_rom_1024
+Z214 w1534973187
+R1
+R2
+R3
+Z215 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd
+Z216 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd
+l0
+L42
+V9BUQVcZGj?]@zzdeXO8PQ3
+!s100 l=QkK7`7YZ`ZhkE<7TKfO1
+R6
+32
+R111
+!i10b 1
+R112
+Z217 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd|
+Z218 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 17 sawtooth_rom_1024 0 22 9BUQVcZGj?]@zzdeXO8PQ3
+l83
+L53
+Vn6Z[@WYimaDfSb:6CQnSK2
+!s100 03QQWDa0dXPzh_YnK];L61
+R6
+32
+R111
+!i10b 1
+R112
+R217
+R218
+!i113 1
+R11
+R12
+Esawtooth_rom_512
+Z219 w1534973218
+R1
+R2
+R3
+Z220 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd
+Z221 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd
+l0
+L42
+VW<]X0M4ljfk;nDaihD>JQ0
+!s100 F:<UD4;kVCg_b0kIO`]f83
+R6
+32
+R111
+!i10b 1
+R112
+Z222 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd|
+Z223 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 16 sawtooth_rom_512 0 22 W<]X0M4ljfk;nDaihD>JQ0
+l83
+L53
+VHA0O1[n9<6Yc5l?hQRVId1
+!s100 7o5E6Lbj30Ha;18=9aGaU1
+R6
+32
+R111
+!i10b 1
+R112
+R222
+R223
+!i113 1
+R11
+R12
+Esine_rom_1024
+Z224 w1534973244
+R1
+R2
+R3
+Z225 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd
+Z226 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd
+l0
+L42
+VKM?ULQiIEig;KV;U^CnH40
+!s100 mf@Qz]?gOMAnK[>ROoNl>2
+R6
+32
+R111
+!i10b 1
+R112
+Z227 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd|
+Z228 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 13 sine_rom_1024 0 22 KM?ULQiIEig;KV;U^CnH40
+l83
+L53
+VZ`a1HR6UW93WP3h_]Ql1k2
+!s100 c0VHXdCcD?4dnS5ca?FYM3
+R6
+32
+R111
+!i10b 1
+R112
+R227
+R228
+!i113 1
+R11
+R12
+Esine_rom_512
+Z229 w1534971435
+R1
+R2
+R3
+Z230 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd
+Z231 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd
+l0
+L42
+V`J<2D95DnI:B9a8XjlJ_M1
+!s100 0Ie6_:[JEJ9:Pj7Jf07aS3
+R6
+32
+R111
+!i10b 1
+R112
+Z232 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd|
+Z233 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 12 sine_rom_512 0 22 `J<2D95DnI:B9a8XjlJ_M1
+l83
+L53
+VE[PfI8@[iYhLRlKk;9neT0
+!s100 CzfazDM`jRFz[L^Se=<A42
+R6
+32
+R111
+!i10b 1
+R112
+R232
+R233
+!i113 1
+R11
+R12
+Estep_div
+Z234 w1534588350
+R1
+R2
+R3
+Z235 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd
+Z236 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd
+l0
+L42
+VRECh4QI?`J3P;cnfH1MJl1
+!s100 _e]CZhWU]?N9JGW2iZRZa0
+R6
+32
+R16
+!i10b 1
+R17
+Z237 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd|
+Z238 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 8 step_div 0 22 RECh4QI?`J3P;cnfH1MJl1
+l82
+L55
+V88bj`?_X:?mIGzH1X3m9T3
+!s100 KERI[ZgzkS]N6A6BSkiA82
+R6
+32
+R16
+!i10b 1
+R17
+R237
+R238
+!i113 1
+R11
+R12
+Etriangle_rom_1024
+Z239 w1534280674
+R1
+R2
+R3
+Z240 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd
+Z241 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd
+l0
+L42
+Ve2iGVS^zi_[JZFgM>0Se<1
+!s100 YI`dJa0gQMB0HhO9G[YbP1
+R6
+32
+R16
+!i10b 1
+R17
+Z242 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd|
+Z243 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 17 triangle_rom_1024 0 22 e2iGVS^zi_[JZFgM>0Se<1
+l83
+L53
+VSz8Q9>bjU>cBi=zf[1Lfh3
+!s100 GA8]R_[d`J8HIgCDgfX=_3
+R6
+32
+R16
+!i10b 1
+R17
+R242
+R243
+!i113 1
+R11
+R12
+Etriangle_rom_512
+Z244 w1534146530
+R1
+R2
+R3
+Z245 8C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd
+Z246 FC:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd
+l0
+L42
+V6J7G?LJj8znn<]]NiW:O@1
+!s100 GOS4zYR<JkSH7YiPOmITb3
+R6
+32
+R16
+!i10b 1
+R17
+Z247 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd|
+Z248 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd|
+!i113 1
+R11
+R12
+Asyn
+R1
+R2
+DEx4 work 16 triangle_rom_512 0 22 6J7G?LJj8znn<]]NiW:O@1
+l83
+L53
+VRgIK?JBCFA7g>AjLJ@N<f1
+!s100 REGFhB;H<3IlAei1WJgm=2
+R6
+32
+R16
+!i10b 1
+R17
+R247
+R248
+!i113 1
+R11
+R12
+Euart
+Z249 w1470503773
+R21
+R22
+R1
+R2
+R3
+Z250 8C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd
+Z251 FC:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd
+l0
+L18
+VbJB>aUZF`_R1fZgdShI<<3
+!s100 HoHlAMDXkR;V2z5IUMlXQ1
+R6
+32
+R143
+!i10b 1
+R144
+Z252 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd|
+Z253 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd|
+!i113 1
+R11
+R12
+Afull
+Z254 DEx4 work 7 uart_rx 0 22 6c:4@]g9ak_I=GzTGE[jf2
+Z255 DEx4 work 7 uart_tx 0 22 KO8To`6`G5OXo]<AZV@6f0
+R21
+R22
+R1
+R2
+DEx4 work 4 uart 0 22 bJB>aUZF`_R1fZgdShI<<3
+l53
+L42
+V7YQB;@k?hN1aKU:]Lh]]l1
+!s100 X>EiRh0>9R7JYB4jBO`d>1
+R6
+32
+R143
+!i10b 1
+R144
+R252
+R253
+!i113 1
+R11
+R12
+Euart_assembler
+Z256 w1536873695
+R72
+R21
+R22
+R1
+R2
+R3
+Z257 8C:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd
+Z258 FC:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd
+l0
+L9
+Vn4>6z9`ZFejNnd40knH^>3
+!s100 Iz@F4ikE;W]JYlg<Zg;1j3
+R6
+32
+R63
+!i10b 1
+R64
+Z259 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd|
+Z260 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 14 uart_assembler 0 22 n4>6z9`ZFejNnd40knH^>3
+l125
+L58
+V]OTXId_DOgQEb=:G:PbA<2
+!s100 a@m[EaR]KN:4lfBHzDjfG2
+R6
+32
+R63
+!i10b 1
+R64
+R259
+R260
+!i113 1
+R11
+R12
+Euart_parity
+R249
+R22
+R1
+R2
+R3
+Z261 8C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd
+Z262 FC:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd
+l0
+L14
+VGUNei4j_Zo7BJYOP9zaGP2
+!s100 LZz;T?1KgS5b24dR`l5eJ2
+R6
+32
+R143
+!i10b 1
+R144
+Z263 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd|
+Z264 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd|
+!i113 1
+R11
+R12
+Afull
+R22
+R1
+R2
+Z265 DEx4 work 11 uart_parity 0 22 GUNei4j_Zo7BJYOP9zaGP2
+l27
+L25
+VcfidC^62A6SRMDa3KAiDX3
+!s100 ROCe[RMzXOOjTM=83Z3nd0
+R6
+32
+R143
+!i10b 1
+R144
+R263
+R264
+!i113 1
+R11
+R12
+Euart_rx
+R249
+R22
+R1
+R2
+R3
+Z266 8C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd
+Z267 FC:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd
+l0
+L14
+V6c:4@]g9ak_I=GzTGE[jf2
+!s100 _ENNOcjDeP66:lA:E]S0M2
+R6
+32
+R143
+!i10b 1
+R144
+Z268 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd|
+Z269 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd|
+!i113 1
+R11
+R12
+Afull
+R265
+R22
+R1
+R2
+R254
+l48
+L31
+V=S[2XlAPLdndf>E^7b5nl0
+!s100 >>Nok0Yg]YQmLFl=0N;T21
+R6
+32
+R143
+!i10b 1
+R144
+R268
+R269
+!i113 1
+R11
+R12
+Euart_tx
+R249
+R22
+R1
+R2
+R3
+Z270 8C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd
+Z271 FC:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd
+l0
+L14
+VKO8To`6`G5OXo]<AZV@6f0
+!s100 DmFIWaJ@:?kbFX55Mc9Ti2
+R6
+32
+R143
+!i10b 1
+R144
+Z272 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd|
+Z273 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd|
+!i113 1
+R11
+R12
+Afull
+R265
+R22
+R1
+R2
+R255
+l47
+L31
+Vna:4kZaSWUg?g>1VAG9c[2
+!s100 fhM7IHB3MNzhE7gFiHESE2
+R6
+32
+R143
+!i10b 1
+R144
+R272
+R273
+!i113 1
+R11
+R12
+Ewave_rom_testbench
+Z274 w1534966657
+R72
+R21
+R22
+R1
+R2
+R3
+Z275 8C:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd
+Z276 FC:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd
+l0
+L9
+VT]V6XefIPeDW:VVZ<`<>o1
+!s100 Ljd;@1:JSilz3M3VBEi:]3
+R6
+32
+R143
+!i10b 1
+R144
+Z277 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd|
+Z278 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 18 wave_rom_testbench 0 22 T]V6XefIPeDW:VVZ<`<>o1
+l205
+L32
+V`Lco8hKO]?WSF?Z8kQdN33
+!s100 Nf@gV_N:^>F=7W4@O456Y0
+R6
+32
+R143
+!i10b 1
+R144
+R277
+R278
+!i113 1
+R11
+R12
+Ewave_unit_rom_testbench
+Z279 w1535018102
+R72
+R21
+R22
+R1
+R2
+R3
+Z280 8C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd
+Z281 FC:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd
+l0
+L9
+VnRYJ]?1elgb7]z6C_HLi[3
+!s100 IiMOTM]:6]@[mPF[58V@g2
+R6
+32
+R143
+!i10b 1
+R144
+Z282 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd|
+Z283 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 23 wave_unit_rom_testbench 0 22 nRYJ]?1elgb7]z6C_HLi[3
+l259
+L34
+VOlKDiLaPNcFP:l:9=oEMd3
+!s100 4h>Gi:XzgBmf1m?bjoE7Y1
+R6
+32
+R143
+!i10b 1
+R144
+R282
+R283
+!i113 1
+R11
+R12
+Ewave_unit_rom_uart_testbench
+Z284 w1542547262
+R72
+R21
+R22
+R1
+R2
+Z285 dC:/Users/Maximilian Schrapel/Desktop/Wavegenerator_DE-10/Wavegenerator_DE-10/Wavegenerator/modelsim
+Z286 8C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_uart_testbench.vhd
+Z287 FC:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_uart_testbench.vhd
+l0
+L9
+VY=U^c>gl6_24aYTD[MYN^2
+!s100 S^?`ZQh`OToN7_>`5PjRU0
+R6
+32
+Z288 !s110 1565728545
+!i10b 1
+Z289 !s108 1565728545.000000
+Z290 !s90 -reportprogress|300|-work|work|-2002|-explicit|C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_uart_testbench.vhd|
+Z291 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_uart_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+Z292 DEx4 work 28 wave_unit_rom_uart_testbench 0 22 Y=U^c>gl6_24aYTD[MYN^2
+l348
+L38
+Z293 VNLZm2`17PM1>d:`dzDU2F1
+Z294 !s100 c5BVR0CmM?>AHb^aAmkBW3
+R6
+32
+R288
+!i10b 1
+R289
+R290
+R291
+!i113 1
+R11
+R12
+Ewave_updatelogic
+Z295 w1541549799
+R72
+R21
+R22
+R1
+R2
+R3
+Z296 8C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd
+Z297 FC:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd
+l0
+L9
+V^k;Zo<d;F:fCJ4P4<HVJX3
+!s100 H<1hJ>OOLJ>h5e<NUX]5T3
+R6
+32
+R7
+!i10b 1
+R8
+Z298 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd|
+Z299 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 16 wave_updatelogic 0 22 ^k;Zo<d;F:fCJ4P4<HVJX3
+l135
+L82
+VohL;4<XM?LFVDP5D]AUSo0
+!s100 `GJ=VB?n8fn@mce]>=oAJ0
+R6
+32
+R7
+!i10b 1
+R8
+R298
+R299
+!i113 1
+R11
+R12
+Ewave_updatelogic2
+Z300 w1541547856
+R72
+R21
+R22
+R1
+R2
+R3
+Z301 8C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd
+Z302 FC:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd
+l0
+L9
+VG;bCFXi7Y_3M:W2FaXL;60
+!s100 gT7KePJLgEJkI=349Fn5R1
+R6
+32
+R63
+!i10b 1
+R64
+Z303 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd|
+Z304 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 17 wave_updatelogic2 0 22 G;bCFXi7Y_3M:W2FaXL;60
+l135
+L82
+VjNjL3FTE:8;0N^F81g4Mz3
+!s100 Pk<AQzFde>RcFi7REiPTd2
+R6
+32
+R63
+!i10b 1
+R64
+R303
+R304
+!i113 1
+R11
+R12
+Ewave_updatelogic_testbench
+Z305 w1535055761
+R72
+R21
+R22
+R1
+R2
+R3
+Z306 8C:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd
+Z307 FC:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd
+l0
+L9
+VCOGGlj6MgD7oE3Hm>^Fz;3
+!s100 [Ab:8QRHbOP_eJWjSj1Ef0
+R6
+32
+R7
+!i10b 1
+R8
+Z308 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd|
+Z309 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 26 wave_updatelogic_testbench 0 22 COGGlj6MgD7oE3Hm>^Fz;3
+l174
+L32
+V7V<=[=Z@QYo`4Rh>6f1Kl2
+!s100 6XBA?4>l4mKFEYdVc?b7B2
+R6
+32
+R7
+!i10b 1
+R8
+R308
+R309
+!i113 1
+R11
+R12
+Ewavecounter
+Z310 w1534685015
+R21
+R22
+R1
+R2
+R3
+Z311 8C:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd
+Z312 FC:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd
+l0
+L19
+VLg>SkZf;n=z^XGM_dzC:e1
+!s100 c07YHl02;obc`EnM@Oke@1
+R6
+32
+R25
+!i10b 1
+R26
+Z313 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd|
+Z314 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 11 wavecounter 0 22 Lg>SkZf;n=z^XGM_dzC:e1
+l68
+L37
+VLZFL12@5m@mGRb5@2:5=82
+!s100 cAO62EGX_akLNKE_7iW>`1
+R6
+32
+R25
+!i10b 1
+R26
+R313
+R314
+!i113 1
+R11
+R12
+Ewavegenerator
+Z315 w1537257411
+R72
+R21
+R22
+R1
+R2
+R3
+Z316 8C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd
+Z317 FC:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd
+l0
+L9
+VJ@hT3lEjY`:aiglfUFKU61
+!s100 oIWZgZA1JI`@mZacQAko;0
+R6
+32
+R25
+!i10b 1
+R26
+Z318 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd|
+Z319 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 13 wavegenerator 0 22 J@hT3lEjY`:aiglfUFKU61
+l388
+L31
+VF[6go8m=RRGKheFmKzP850
+!s100 5SAZW>PHFibFPf2gCa`fT2
+R6
+32
+R25
+!i10b 1
+R26
+R318
+R319
+!i113 1
+R11
+R12
+Ewavegenerator_testbench
+Z320 w1536911322
+R21
+R22
+R1
+R2
+R3
+Z321 8C:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd
+Z322 FC:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd
+l0
+L6
+V710P5INHjIETeY;ZXz>OL3
+!s100 C0n4U<dF69@3;=Ife86Pe0
+R6
+32
+R7
+!i10b 1
+R8
+Z323 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd|
+Z324 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 23 wavegenerator_testbench 0 22 710P5INHjIETeY;ZXz>OL3
+l47
+L19
+VE1Pi[3H6gZXLe6FQ1TZfH2
+!s100 FRVXnZKX9_E2@R6[TX6Na2
+R6
+32
+R7
+!i10b 1
+R8
+R323
+R324
+!i113 1
+R11
+R12
+Ewaveunit
+Z325 w1542553911
+R72
+R21
+R22
+R1
+R2
+R3
+Z326 8C:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd
+Z327 FC:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd
+l0
+L9
+VGC>f_PBhLo=l9SXHZXnaD1
+!s100 Q:F=eWMYkgLKOI@JIY0m73
+R6
+32
+Z328 !s110 1542553918
+!i10b 1
+Z329 !s108 1542553918.000000
+Z330 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd|
+Z331 !s107 C:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd|
+!i113 1
+R11
+R12
+Artl
+R72
+R21
+R22
+R1
+R2
+DEx4 work 8 waveunit 0 22 GC>f_PBhLo=l9SXHZXnaD1
+l88
+L47
+V5gigMA`hSzKHInV5DbjDH3
+!s100 IQCTH^DZZVU75b2^2R1_i1
+R6
+32
+R328
+!i10b 1
+R329
+R330
+R331
+!i113 1
+R11
+R12
+Ewaveunit_testbench
+Z332 w1534877198
+R21
+R22
+R1
+R2
+R3
+Z333 8C:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd
+Z334 FC:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd
+l0
+L7
+VYJH57R=;mR@7Y[KDha[<=3
+!s100 B__`[dFAdAlTS^[ODd;VK3
+R6
+32
+R32
+!i10b 1
+R38
+Z335 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd|
+Z336 !s107 C:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd|
+!i113 1
+R11
+R12
+Artl
+R21
+R22
+R1
+R2
+DEx4 work 18 waveunit_testbench 0 22 YJH57R=;mR@7Y[KDha[<=3
+l129
+L25
+VUj?I65[WSIjo=;DL8e0lZ3
+!s100 7CkX6agInSk6RL=7LLG;h3
+R6
+32
+R32
+!i10b 1
+R38
+R335
+R336
+!i113 1
+R11
+R12

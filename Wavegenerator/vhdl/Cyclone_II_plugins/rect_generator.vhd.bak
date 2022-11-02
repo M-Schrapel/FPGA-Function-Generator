@@ -1,0 +1,37 @@
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity rect_generator is
+	generic (
+		PWM_STEPS	: integer := 512  -- Number of Steps
+	);
+	port (
+		address		: in  	std_logic_vector (9 downto 0);
+		clken			: in  	std_logic  := '0';
+		clock 		: in  	std_ulogic;
+		q				: out   	std_ulogic_vector((integer(ceil(log2(real(MAX_VALUE*1)))))-1 downto 0)
+    );
+end rect_generator;
+
+architecture rtl of rom_reader is
+
+begin
+
+rect_gen:
+		process(clock,clken,address)
+				begin						
+					if clken ='1' then
+						if unsigned(address) >= to_unsigned(PWM_STEPS,address'length) then
+							q	<= (others => '0');
+						else
+							q	<= (others => '1');	
+						end if;
+					else
+						q		<= (others => '0');		
+					end if;
+	end process ff;
+
+end rtl;

@@ -1,0 +1,29 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "uart_txd",
+					"strict" : false
+				},
+				{
+					"name" : "wave[0]",
+					"strict" : false
+				},
+				{
+					"name" : "wave[1]",
+					"strict" : false
+				},
+				{
+					"name" : "wave[2]",
+					"strict" : false
+				},
+				{
+					"name" : "uart_rxd",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

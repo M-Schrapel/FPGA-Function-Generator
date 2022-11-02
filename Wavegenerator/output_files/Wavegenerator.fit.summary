@@ -1,0 +1,20 @@
+Fitter Status : Successful - Wed Aug 14 00:28:20 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : Wavegenerator
+Top-level Entity Name : Wavegenerator
+Family : Cyclone V
+Device : 5CSEBA6U23I7DK
+Timing Models : Final
+Logic utilization (in ALMs) : 1,354 / 41,910 ( 3 % )
+Total registers : 756
+Total pins : 7 / 314 ( 2 % )
+Total virtual pins : 0
+Total block memory bits : 1,302,554 / 5,662,720 ( 23 % )
+Total RAM Blocks : 128 / 553 ( 23 % )
+Total DSP Blocks : 2 / 112 ( 2 % )
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1 / 6 ( 17 % )
+Total DLLs : 0 / 4 ( 0 % )

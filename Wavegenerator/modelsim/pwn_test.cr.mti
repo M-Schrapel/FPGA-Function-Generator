@@ -1,0 +1,578 @@
+C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity phase_LUT_1024
+-- Compiling architecture SYN of phase_lut_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/Wavegenerator_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity Wavegenerator_testbench
+-- Compiling architecture rtl of Wavegenerator_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/div_step.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity div_step
+-- Compiling architecture rtl of div_step
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_512_f_50
+-- Compiling architecture SYN of period_rom_s_512_f_50
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/counter_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity counter_testbench
+-- Compiling architecture rtl of counter_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_1024_f_100
+-- Compiling architecture SYN of period_rom_s_1024_f_100
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mapping_div.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mapping_div
+-- Compiling architecture SYN of mapping_div
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_calculator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity pwm_calculator
+-- Compiling architecture rtl of pwm_calculator
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_pwm.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mul_pwm
+-- Compiling architecture SYN of mul_pwm
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/period_mul.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity period_mul
+-- Compiling architecture rtl of period_mul
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/rom_reader.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity rom_reader
+-- Compiling architecture rtl of rom_reader
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_tx.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UART_TX
+-- Compiling architecture FULL of UART_TX
+-- Loading entity UART_PARITY
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sawtooth_ROM_1024
+-- Compiling architecture SYN of sawtooth_rom_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/div_100.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity div_100
+-- Compiling architecture rtl of div_100
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/waveunit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity waveunit
+-- Compiling architecture rtl of waveunit
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/pwm_generator_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity pwm_generator_testbench
+-- Compiling architecture rtl of pwm_generator_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/libaries/function_pkg.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling package function_pkg
+-- Compiling package body function_pkg
+-- Loading package function_pkg
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_350.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll_350
+-- Compiling architecture SYN of pll_350
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_512.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sine_ROM_512
+-- Compiling architecture SYN of sine_rom_512
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity Wavegenerator
+-- Compiling architecture rtl of Wavegenerator
+** Warning: C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(38): Nonresolved signal 'clock_int' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(404):Conditional signal assignment line__404
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(400):Conditional signal assignment line__400
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(396):Conditional signal assignment line__396
+** Warning: C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(47): Nonresolved signal 'mult_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(670):Conditional signal assignment line__670
+** Warning: C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(48): Nonresolved signal 'pwm_step_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(671):Conditional signal assignment line__671
+** Warning: C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(49): Nonresolved signal 'freq_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(673):Conditional signal assignment line__673
+** Warning: C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(50): Nonresolved signal 'function_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/vhdl/Wavegenerator.vhd(672):Conditional signal assignment line__672
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/phase_LUT_512.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity phase_LUT_512
+-- Compiling architecture SYN of phase_lut_512
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/mapping_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity mapping_unit
+-- Compiling architecture rtl of mapping_unit
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_512_f_350
+-- Compiling architecture SYN of period_rom_s_512_f_350
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_div.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity amp_div
+-- Compiling architecture SYN of amp_div
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll
+-- Compiling architecture SYN of pll
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity UART
+-- Compiling architecture FULL of UART
+-- Loading entity UART_TX
+-- Loading entity UART_RX
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/counter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity counter
+-- Compiling architecture rtl of counter
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_512.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity triangle_ROM_512
+-- Compiling architecture SYN of triangle_rom_512
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/wavecounter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity wavecounter
+-- Compiling architecture rtl of wavecounter
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sawtooth_ROM_512.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sawtooth_ROM_512
+-- Compiling architecture SYN of sawtooth_rom_512
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/wave_updatelogic_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity wave_updatelogic_testbench
+-- Compiling architecture rtl of wave_updatelogic_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/gain_unit.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity gain_unit
+-- Compiling architecture rtl of gain_unit
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_100.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll_100
+-- Compiling architecture SYN of pll_100
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_512.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity custom_RAM_512
+-- Compiling architecture SYN of custom_ram_512
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd {2 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity wave_unit_rom_testbench
+-- Compiling architecture rtl of wave_unit_rom_testbench
+** Warning: C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(42): Nonresolved signal 'mult_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(498):Conditional signal assignment line__498
+** Warning: C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(43): Nonresolved signal 'pwm_step_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(499):Conditional signal assignment line__499
+** Warning: C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(44): Nonresolved signal 'freq_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(501):Conditional signal assignment line__501
+** Warning: C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(45): Nonresolved signal 'function_request_wave' may have multiple sources.
+  Drivers:
+    C:/altera/13.0sp1/Wavegenerator/testbench/wave_unit_rom_testbench.vhd(500):Conditional signal assignment line__500
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/rom_reader_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity rom_reader_testbench
+-- Compiling architecture rtl of rom_reader_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/uart_assembler.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity uart_assembler
+-- Compiling architecture rtl of uart_assembler
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/pwm_generator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity pwm_generator
+-- Compiling architecture rtl of pwm_generator
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/div_mapping_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity div_mapping_1024
+-- Compiling architecture rtl of div_mapping_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_512_f_100
+-- Compiling architecture SYN of period_rom_s_512_f_100
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/mul_period.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity mul_period
+-- Compiling architecture SYN of mul_period
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_1024_f_50
+-- Compiling architecture SYN of period_rom_s_1024_f_50
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/last_step_calc.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity last_step_calc
+-- Compiling architecture rtl of last_step_calc
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/pll_50.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity pll_50
+-- Compiling architecture SYN of pll_50
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/pwm_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity pwm_testbench
+-- Compiling architecture rtl of pwm_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/pwm_calculator_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity pwm_calculator_testbench
+-- Compiling architecture rtl of pwm_calculator_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/custom_RAM_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity custom_RAM_1024
+-- Compiling architecture SYN of custom_ram_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/triangle_ROM_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity triangle_ROM_1024
+-- Compiling architecture SYN of triangle_rom_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/sine_ROM_1024.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity sine_ROM_1024
+-- Compiling architecture SYN of sine_rom_1024
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/wave_rom_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity wave_rom_testbench
+-- Compiling architecture rtl of wave_rom_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/amp_mul.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity amp_mul
+-- Compiling architecture SYN of amp_mul
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity period_ROM_s_1024_f_350
+-- Compiling architecture SYN of period_rom_s_1024_f_350
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity wave_updatelogic
+-- Compiling architecture rtl of wave_updatelogic
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/testbench/waveunit_testbench.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity waveunit_testbench
+-- Compiling architecture rtl of waveunit_testbench
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/Cyclone_II_plugins/step_div.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity step_div
+-- Compiling architecture SYN of step_div
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/rect_generator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Compiling entity rect_generator
+-- Compiling architecture rtl of rect_generator
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/wave_updatelogic2.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package function_pkg
+-- Compiling entity wave_updatelogic2
+-- Compiling architecture rtl of wave_updatelogic2
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_parity.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UART_PARITY
+-- Compiling architecture FULL of UART_PARITY
+
+} {} {}} C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/altera/13.0sp1/Wavegenerator/vhdl/external/uart_rx.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity UART_RX
+-- Compiling architecture FULL of UART_RX
+-- Loading entity UART_PARITY
+
+} {} {}}

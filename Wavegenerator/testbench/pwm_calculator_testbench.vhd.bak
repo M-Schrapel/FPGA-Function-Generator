@@ -1,0 +1,91 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.log2;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity pwm_calculator_testbench is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps + gain)
+		MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+		CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+	);
+end pwm_calculator_testbench;
+
+architecture rtl of pwm_calculator_testbench is
+
+signal clock  				: std_ulogic :=  '0';
+signal reset  				: std_ulogic :=  '0';
+
+signal start_calc			: std_ulogic := '0';
+signal factor				: std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+signal period				: std_logic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+signal period_on			: std_logic_vector(9 downto 0) := (others => '0');
+
+signal result				: std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+signal data_avail			: std_ulogic :=  '0';
+
+	component pwm_calculator is
+		generic (
+			PWM_STEPS	: integer := 512;  -- Number of Steps
+			CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+			AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps + gain)
+			MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+			CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+		);
+		port (
+			clock				: in  std_ulogic := '0';
+			reset				: in  std_ulogic := '0';
+			
+			start_calc		: in  std_ulogic := '0';
+			factor			: in  std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+			period			: in  std_logic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+			period_on		: in  std_logic_vector(9 downto 0);
+			
+			result			: out std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+			data_avail		: out std_ulogic
+		);
+	end component pwm_calculator;
+
+
+begin
+
+	gen_reset : process
+	begin
+		reset <= '1';
+		wait for 40 ns;
+		reset <= '0';
+		wait;
+	end process gen_reset;
+	
+	gen_clock : process
+	begin
+    clock <= '1';
+    wait for 10 ns;
+    clock <= '0';
+    wait for 10 ns;
+	end process gen_clock;
+	
+	pwmsteps : counter -- counter for every pwm step
+		generic map(
+			PWM_STEPS 	=> PWM_STEPS,
+			CLOCK_MHZ 	=> CLOCK_MHZ,
+			AMP_STEPS 	=> AMP_STEPS,
+			MAX_FREQ 	=> MAX_FREQ,
+			CALC_TICKS 	=> CALC_TICKS
+		)
+		port map(
+			clock 		=> clock,
+			reset			=> reset,
+			start_calc 	=> start_calc,
+			factor		=> factor,
+			period 		=> period,
+			period_on	=> period_on,
+			result 		=> result,
+			data_avail	=> data_avail
+		 );	
+	
+end rtl;

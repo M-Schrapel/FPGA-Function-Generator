@@ -1,0 +1,63 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity last_step_calc is
+	generic (
+		PWM_STEPS	: integer := 512  -- Number of Steps
+	);
+	port (
+		enable		: in  std_ulogic;
+		period		: in  std_logic_vector(16 downto 0);
+		
+		nperiods		: out std_logic_vector (16 downto 0);
+		last_period	: out std_logic_vector (7 downto 0)
+    );
+end last_step_calc;
+
+architecture rtl of last_step_calc is
+
+signal div_periods	: std_logic_vector(7 downto 0);
+signal period_int		: std_logic_vector(16 downto 0);
+signal result_int		: std_logic_vector(16 downto 0);
+signal remain_int		: std_logic_vector(16 downto 0);
+
+component step_div is
+	PORT
+	(
+		denom		: in  std_logic_vector (7 downto 0);
+		numer		: in  std_logic_vector (16 downto 0);
+		quotient	: out std_logic_vector (16 downto 0);
+		remain	: out std_logic_vector (7 downto 0)
+	);
+end component step_div;
+
+begin
+period_int		<= std_logic_vector(to_unsigned(PWM_STEPS,period_int'length));	
+
+	div_steps: step_div 
+		port map(
+			denom 	=> period_int,
+			numer		=> div_periods,
+			quotient	=> result_int,
+			remain	=> remain_int
+		 );	
+
+	en:
+		process(enable,result_int,remain_int,period)
+				begin	
+					if enable = '1' then
+						nperiods			<= result_int;	
+						last_period		<= remain_int;
+						div_periods		<= period;	
+						
+					else
+						div_periods		<= (others => '0');	
+						nperiods			<= (others => '0');
+						last_period		<= (others => '0');
+					end if;
+	end process en;	
+
+
+end architecture rtl;

@@ -1,0 +1,49 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity pwm_generator is
+	generic (
+		PWM_STEPS		: integer := 512;  -- Number of Steps
+		CLOCK_MHZ		: integer := 50;   -- Clock signal in MHZ
+		MAX_FREQ			: integer := 512	 -- Maximum Frequency of Output in Hz
+	);
+	port (
+		clock 			: in  std_ulogic;
+		reset				: in 	std_ulogic;
+
+		period_on		: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		n_periods		: in  std_ulogic_vector(16 downto 0);
+		last_period		: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		last_period_on	: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		
+		data_request	: out std_ulogic;
+		ack				: out std_ulogic;
+		wave				: out std_ulogic;	
+		
+    );
+end pwm_generator;
+
+architecture rtl of pwm_generator is
+
+signal n_periods_act				: std_ulogic_vector(n_periods'length - 1 downto 0) := (others => '0');
+signal n_periods_act_nxt		: std_ulogic_vector(n_periods'length - 1 downto 0) := (others => '0');
+signal n_periods_tmp				: std_ulogic_vector(n_periods'length - 1 downto 0) := (others => '0');
+signal n_periods_tmp_nxt		: std_ulogic_vector(n_periods'length - 1 downto 0) := (others => '0');
+
+signal last_period_act			: std_ulogic_vector(last_period'length - 1 downto 0) := (others => '0');
+signal last_period_act_nxt		: std_ulogic_vector(last_period'length - 1 downto 0) := (others => '0');
+signal last_period_tmp			: std_ulogic_vector(last_period'length - 1 downto 0) := (others => '0');
+signal last_period_tmp_nxt		: std_ulogic_vector(last_period'length - 1 downto 0) := (others => '0');
+
+signal last_period_on_act		: std_ulogic_vector(last_period_on'length - 1 downto 0) := (others => '0');
+signal last_period_on_act_nxt	: std_ulogic_vector(last_period_on'length - 1 downto 0) := (others => '0');
+signal last_period_on_tmp		: std_ulogic_vector(last_period_on'length - 1 downto 0) := (others => '0');
+signal last_period_on_tmp_nxt	: std_ulogic_vector(last_period_on'length - 1 downto 0) := (others => '0');
+
+
+begin
+
+
+end rtl;

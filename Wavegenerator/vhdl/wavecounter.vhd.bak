@@ -1,0 +1,137 @@
+-----------------------------------------------------------
+-- 	Human-Computer Interaction Group
+-- 	Leibniz University Hannover
+-----------------------------------------------------------
+-- project:			Waveganerator
+--	file :			counter.vhdl
+--	authors :		Maximilian Schrapel	
+--	last update :	08/2018
+--	description :	Wave Counter
+--						Generates PWM Signal with data from ROM
+-----------------------------------------------------------
+
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity wavecounter is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50   -- Clock signal in MHZ
+	);
+	port (
+		clock 		: in  std_ulogic;
+		reset			: in 	std_ulogic;
+
+		period		: in  std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0); -- Minimum update rate at 1Hz
+		period_on	: in  std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0); -- Minimum update rate at 1Hz
+
+		ack			: out std_ulogic;
+		pwm_step		: out std_ulogic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0);
+		wave			: out std_ulogic
+    );
+end wavecounter;
+
+architecture rtl of wavecounter is
+
+signal next_pwmstep		 : std_ulogic;
+--signal pwm_step			 : std_ulogic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0);
+
+signal period_sig			 : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+signal period_sig_nxt	 : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+
+signal period_cnt			 : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+signal period_cnt_nxt	 : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+
+signal period_on_sig		 : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+signal period_on_sig_nxt : std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+
+signal clock_sig : std_ulogic;
+signal reset_sig : std_ulogic;
+
+
+	component counter is
+	generic (
+		MAX_VALUE	: integer := 512  -- Number of Steps
+	);
+	port (
+		clock 		: in  	std_ulogic;
+		reset			: in 		std_ulogic;
+
+		enable		: in   	std_ulogic;
+		count			: out   	std_ulogic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0)
+    );
+	end component counter;
+
+begin
+
+	gen_reset : process
+	begin
+		reset_sig <= '1';
+		wait for 40 ns;
+		reset_sig <= '0';
+		wait;
+	end process gen_reset;
+	
+	gen_clock : process(clock_sig)
+	begin
+		clock_sig <= not clock after 20 ns;
+	end process gen_clock;
+
+	pwmsteps : counter -- counter for every pwm step
+		generic map(
+			MAX_VALUE 	=> PWM_STEPS
+		)
+		port map(
+			clock 	=> clock_sig,
+			reset		=> reset_sig,
+			enable	=> next_pwmstep,
+			count		=> pwm_step
+		 );		
+	
+	ff:
+		process(reset_sig,clock_sig)
+				begin	
+					if reset_sig = '1' then
+						period_sig		<= (others => '0');			
+						period_cnt		<= (others => '0');	
+						period_on_sig 	<= (others => '0');	
+					elsif rising_edge(clock_sig) then
+						period_sig		<= period_sig_nxt;
+						period_cnt  	<= period_cnt_nxt;
+						period_on_sig 	<= period_on_sig_nxt;
+					end if;
+	end process ff;	
+	
+	period_ack:
+		process(period_sig,period_cnt)
+				begin		
+					if unsigned(period_sig) = unsigned(period_cnt) then
+						ack 					<= '1';	
+						period_sig_nxt 	<= period;
+						period_on_sig_nxt	<= period_on;
+						next_pwmstep 		<= '1';	
+						period_cnt_nxt		<= (others => '0');	
+					else
+						ack 					<= '0';	
+						period_sig_nxt 	<= period_sig;
+						period_on_sig_nxt	<= period_on_sig;
+						next_pwmstep 		<= '0';
+						period_cnt_nxt 	<= std_ulogic_vector( unsigned(period_cnt) + 1 );
+					end if;	
+	end process period_ack;	
+
+	pwm_cnt:
+		process(period_on_sig,period_cnt,period_on)
+			begin	
+				if (unsigned(period_on_sig) <= unsigned(period_cnt)) and (unsigned(period_on) > 0) then
+					wave <= '1';
+				else
+					wave <= '0';
+				end if;
+	end process pwm_cnt;
+
+	
+end architecture rtl;

@@ -1,0 +1,17 @@
+Analysis & Synthesis Status : Successful - Wed Aug 14 00:26:16 2019
+Quartus Prime Version : 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+Revision Name : Wavegenerator
+Top-level Entity Name : Wavegenerator
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 744
+Total pins : 7
+Total virtual pins : 0
+Total block memory bits : 1,302,554
+Total DSP Blocks : 2
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
+Total PLLs : 1
+Total DLLs : 0

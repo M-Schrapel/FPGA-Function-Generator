@@ -1,0 +1,472 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.log2;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+
+entity rom_reader is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps + gain)
+		MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+		NUM_FUNCS	: integer := 5;	 -- Number of functions ( 0=sine, 1=triagle, 2=sawtooth, 3=rectangle, 4=custom)
+		CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+	);
+	port(
+		clock				: in  std_ulogic := '0';
+		reset				: in  std_ulogic := '0';
+		
+		data_request	: in  std_ulogic := '0';
+		function_sel	: in  std_ulogic_vector(integer(ceil(log2(real(NUM_FUNCS*1))))-1 downto 0) := (others => '0');
+		frequency		: in  std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0)  := (others => '0');
+		step				: in  std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		factor			: in  std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+		
+		data_avail		: out std_ulogic;
+		period			: out std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+		period_on		: out std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+		
+		write_custom	: in  std_ulogic := '0';
+		address			: in  std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		pwm_value		: in  std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0')
+	);
+end rom_reader;
+
+architecture rtl of rom_reader is
+
+-- selection of ROM
+signal rom_sel				: std_logic_vector(NUM_FUNCS-1 downto 0) := (others => '0');
+-- next (full) period
+signal period_next		: std_logic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+-- next read period from rom 
+signal period_pwm_next	: std_logic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+
+-- Calculation signals
+-- first calculation result (Multiplier)
+signal res_mul1			: std_logic_vector (28 downto 0) := (others => '0');
+-- second calculation result (Divider)
+signal res_div				: std_logic_vector (28 downto 0) := (others => '0');
+-- final calculation result (amplified)
+signal amplitude			: std_logic_vector (20 downto 0) := (others => '0');
+
+-- Clock counter for valid results
+signal count_clk			: std_ulogic_vector (3 downto 0) := (others => '0');
+signal count_clk_nxt		: std_ulogic_vector (3 downto 0) := (others => '0');
+
+-- 
+signal step_int			: std_logic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+signal frequency_int		: std_logic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0)  := (others => '0');
+signal factor_int			: std_logic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+signal pwm_value_int		: std_logic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+signal period_pwm_int	: std_logic_vector(9 downto 0)  := (others => '0');
+signal period_next_int	: std_logic_vector(19 downto 0) := (others => '0');
+
+-- ROM for signals
+component sine_ROM_512 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clken			: in  std_logic;
+		clock			: in  std_logic;
+		q				: out std_logic_vector (8 downto 0)
+	);
+end component sine_ROM_512;
+
+component triangle_ROM_512 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clken			: in  std_logic;
+		clock			: in  std_logic;
+		q				: out std_logic_vector (8 downto 0)
+	);
+end component triangle_ROM_512;
+
+component sawtooth_ROM_512 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clken			: in  std_logic;
+		clock			: in  std_logic;
+		q				: out std_logic_vector (8 downto 0)
+	);
+end component sawtooth_ROM_512;
+
+component custom_RAM_512 is
+	port
+	(
+		clock			: in  std_logic;
+		data			: in  std_logic_vector (8 downto 0);
+		rdaddress	: in  std_logic_vector (8 downto 0);
+		rden			: in  std_logic;
+		wraddress	: in  std_logic_vector (8 downto 0);
+		wren			: in  std_logic;
+		q				: out std_logic_vector (8 downto 0)
+	);
+end component custom_RAM_512;
+
+
+component sine_ROM_1024 is
+	port
+	(
+		address		: in  std_logic_vector (9 downto 0);
+		clken			: in  std_logic  := '1';
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (9 downto 0)
+	);
+end component sine_ROM_1024;
+
+component triangle_ROM_1024 is
+	port
+	(
+		address		: in  std_logic_vector (9 downto 0);
+		clken			: in  std_logic  := '1';
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (9 downto 0)
+	);
+end component triangle_ROM_1024;
+
+component sawtooth_ROM_1024 is
+	port
+	(
+		address		: in  std_logic_vector (9 downto 0);
+		clken			: in  std_logic  := '1';
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (9 downto 0)
+	);
+end component sawtooth_ROM_1024;
+
+component custom_RAM_1024 is
+	port
+	(
+		clock			: in  std_logic  := '1';
+		data			: in  std_logic_vector (9 downto 0);
+		rdaddress	: in  std_logic_vector (9 downto 0);
+		rden			: in  std_logic  := '1';
+		wraddress	: in  std_logic_vector (9 downto 0);
+		wren			: in  std_logic  := '0';
+		q				: out std_logic_vector (9 downto 0)
+	);
+end component custom_RAM_1024;
+
+component rect_generator is
+	generic (
+		PWM_STEPS	: integer := 512  -- Number of Steps
+	);
+	port (
+		address		: in  std_logic_vector (9 downto 0) := (others => '0');
+		clken			: in 	std_logic  := '0';
+		q				: out std_logic_vector((integer(ceil(log2(real(PWM_STEPS*1)))))-1 downto 0)
+    );
+end component rect_generator;
+
+-- periods 
+component period_ROM_s_512_f_50 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (16 downto 0)
+	);
+end component period_ROM_s_512_f_50;
+
+component period_ROM_s_512_f_100 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (17 downto 0)
+	);
+end component period_ROM_s_512_f_100;
+
+component period_ROM_s_512_f_350 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (19 downto 0)
+	);
+end component period_ROM_s_512_f_350;
+
+component period_ROM_s_1024_f_50 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (15 downto 0)
+	);
+end component period_ROM_s_1024_f_50;
+
+component period_ROM_s_1024_f_100 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in  std_logic  := '1';
+		q				: out std_logic_vector (16 downto 0)
+	);
+end component period_ROM_s_1024_f_100;
+
+component period_ROM_s_1024_f_350 is
+	port
+	(
+		address		: in  std_logic_vector (8 downto 0);
+		clock			: in 	std_logic  := '1';
+		q				: out std_logic_vector (18 downto 0)
+	);
+end component period_ROM_s_1024_f_350;
+
+-- Amplitude calculation
+component mul_pwm is
+	port
+	(
+		dataa		: in  std_logic_vector (9 downto 0);
+		datab		: in  std_logic_vector (19 downto 0);
+		result	: out std_logic_vector (28 downto 0)
+	);
+end component mul_pwm;
+
+component amp_mul is
+	port
+	(
+		dataa		: in  std_logic_vector (12 downto 0);
+		datab		: in  std_logic_vector (7 downto 0);
+		result	: out std_logic_vector (20 downto 0)
+	);
+end component amp_mul;
+
+
+component amp_div is
+	port
+	(
+		denom		: in  std_logic_vector (10 downto 0);
+		numer		: in  std_logic_vector (28 downto 0);
+		quotient	: out std_logic_vector (28 downto 0);
+		remain	: out std_logic_vector (10 downto 0)
+	);
+end component amp_div;
+
+	
+
+begin
+
+-- select function
+rom_sel 				<= std_logic_vector(shift_left(to_unsigned(1,NUM_FUNCS), to_integer(unsigned(function_sel)) ));
+-- output period
+period				<= std_ulogic_vector(period_next);
+
+
+step_int				<= std_logic_vector(unsigned(unsigned(step)-1));
+frequency_int		<= std_logic_vector(unsigned(frequency)-1);
+factor_int			<= std_logic_vector(signed(factor));
+pwm_value_int 		<= std_logic_vector(unsigned(pwm_value)-1);
+period_pwm_int(period_pwm_next'length-1 downto 0)	<= period_pwm_next;
+period_next_int(period_next'length-1 downto 0)		<= period_next;
+
+-- ROM for wave with pwm steps 
+rom_512_gen: if PWM_STEPS = 512 generate
+
+	sine_inst : sine_ROM_512
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(0),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	triangle_inst : triangle_ROM_512
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(1),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	sawtooth_inst : sawtooth_ROM_512
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(2),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	custom_inst : custom_RAM_512
+		port map(
+			clock			=> clock,
+			data			=> pwm_value_int,
+			rdaddress	=> step_int,
+			rden			=> rom_sel(4),
+			wraddress	=> std_logic_vector(address),
+			wren			=> std_logic(write_custom),
+			q				=> period_pwm_next
+		);
+end generate rom_512_gen;
+
+
+rom_1024_gen: if PWM_STEPS = 1024 generate
+
+	sine_inst : sine_ROM_1024
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(0),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	triangle_inst : triangle_ROM_1024
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(1),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	sawtooth_inst : sawtooth_ROM_1024
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(2),
+			clock			=> clock,
+			q				=> period_pwm_next
+		);
+	custom_inst : custom_RAM_1024
+		port map(
+			clock			=> clock,
+			data			=> pwm_value_int,
+			rdaddress	=> step_int,
+			rden			=> rom_sel(4),
+			wraddress	=> std_logic_vector(address),
+			wren			=> std_logic(write_custom),
+			q				=> period_pwm_next
+		);
+end generate rom_1024_gen;
+
+	rect_inst : rect_generator
+		generic map(
+			PWM_STEPS	=> PWM_STEPS
+		)
+		port map(
+			address		=> step_int,
+			clken			=> rom_sel(3),
+			q				=> period_pwm_next
+		 );
+
+	
+period_rom_512_50_gen: if PWM_STEPS = 512 and CLOCK_MHZ=50 generate	
+	period_inst : period_ROM_s_512_f_50
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_512_50_gen;
+
+period_rom_512_100_gen: if PWM_STEPS = 512 and CLOCK_MHZ=100 generate	
+	period_inst : period_ROM_s_512_f_100
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_512_100_gen;
+
+
+period_rom_512_350_gen: if PWM_STEPS = 512 and CLOCK_MHZ=350 generate	
+	period_inst : period_ROM_s_512_f_350
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_512_350_gen;
+
+period_rom_1024_50_gen: if PWM_STEPS = 1024 and CLOCK_MHZ=50 generate	
+	period_inst : period_ROM_s_1024_f_50
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_1024_50_gen;
+
+period_rom_1024_100_gen: if PWM_STEPS = 1024 and CLOCK_MHZ=100 generate	
+	period_inst : period_ROM_s_1024_f_100
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_1024_100_gen;
+
+period_rom_1024_350_gen: if PWM_STEPS = 1024 and CLOCK_MHZ=350 generate	
+	period_inst : period_ROM_s_1024_f_350
+		port map(
+			address		=> frequency_int,
+			clock			=> clock,
+			q				=> period_next
+		);
+end generate period_rom_1024_350_gen;
+
+
+-- calculations for amplitude of signal
+	fist_calc: mul_pwm 
+		port map(
+			dataa 	=> period_pwm_int,
+			datab		=> period_next_int,
+			result	=> res_mul1
+		 );	
+
+	second_calc: amp_div 
+		port map(
+			denom 	=> std_logic_vector(to_unsigned(PWM_STEPS*100,11)),
+			numer		=> res_mul1,
+			quotient	=> res_div,
+			remain	=> open -- dont use remain
+		 );	
+	 
+	final_calc: amp_mul 
+		port map(
+			dataa 	=> res_div(12 downto 0),
+			datab		=> factor_int,
+			result	=> amplitude
+		 );	
+		 
+	-- check for clipping of amplitude
+--	clipping_check:
+--		process(amplitude,period_next)	
+--			begin 
+--
+--	end process clipping_check;	
+		 
+	ff:
+		process(reset,clock,amplitude,period_next)
+				begin	
+					if reset = '1' then
+						count_clk		<= (others => '0');	
+						period_on		<= (others => '0');
+						--period			<= (others => '0');
+					elsif rising_edge(clock) then
+						count_clk		<= count_clk_nxt;
+				if unsigned(amplitude) > unsigned(period_next) then
+					period_on	<= std_ulogic_vector(period_next);
+				else
+					period_on	<= std_ulogic_vector(amplitude((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0));
+				end if;
+					end if;
+	end process ff;	
+
+	-- count ticks & communication
+	counter:
+		process(data_request,count_clk)
+				begin	
+					if data_request = '1' then
+						if unsigned(count_clk) >= to_unsigned(CALC_TICKS,count_clk'length) then
+							data_avail		<= '1';
+							count_clk_nxt	<= count_clk;
+						else	
+							data_avail		<= '0';
+							count_clk_nxt	<= std_ulogic_vector( unsigned(count_clk) + 1 );
+						end if;
+					else
+						count_clk_nxt		<= (others => '0');
+						data_avail			<= '0';	
+					end if;
+	end process counter;	
+	
+end rtl;

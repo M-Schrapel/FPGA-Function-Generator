@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity waveunit is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50   -- Clock signal in MHZ
+	);
+	port (
+		clock 		: in  	std_ulogic;
+		reset			: in 		std_ulogic;
+
+		enable		: in   	std_ulogic;
+		period		: in   	std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0); -- Minimum update rate at 1Hz
+		ack			: out   	std_ulogic;
+		wave			: out   	std_ulogic
+    );
+end waveunit;
+
+architecture rtl of waveunit is
+	
+begin
+
+end rtl;

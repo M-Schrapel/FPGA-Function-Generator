@@ -1,0 +1,228 @@
+# Compile of acodec_model.vhdl was successful.
+# Compile of fpga_audiofx_tb.vhdl was successful.
+# Compile of clock_generator.vhdl was successful.
+# Compile of fifo.vhdl was successful.
+# Compile of fpga_audiofx.vhdl was successful.
+# Compile of fpga_audiofx_pkg.vhdl was successful.
+# Compile of i2c_master.vhdl was successful.
+# Compile of i2s_slave.vhdl was successful.
+# Compile of pll.vhdl was successful.
+# Compile of wm8731_configurator.vhdl was successful.
+# 10 compiles, 0 failed with no errors. 
+vsim work.fpga_audiofx_tb
+# vsim work.fpga_audiofx_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.fpga_audiofx_tb(rtl)
+# Loading work.fpga_audiofx(rtl)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.fifo(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.i2s_slave(rtl)
+# Loading work.acodec_model(rtl)
+# ** Warning: Design size of 12210 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/clock
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/reset_n \
+sim:/fpga_audiofx_tb/reset \
+sim:/fpga_audiofx_tb/aud_xclk \
+sim:/fpga_audiofx_tb/aud_bclk \
+sim:/fpga_audiofx_tb/aud_adc_lrck \
+sim:/fpga_audiofx_tb/aud_adc_dat \
+sim:/fpga_audiofx_tb/aud_dac_lrck \
+sim:/fpga_audiofx_tb/aud_dac_dat \
+sim:/fpga_audiofx_tb/i2c_sdat \
+sim:/fpga_audiofx_tb/i2c_sclk
+run
+# ** Note: Cyclone IV E PLL was reset
+#    Time: 0 ps  Iteration: 4  Instance: /fpga_audiofx_tb/fpga_audiofx_inst/pll_inst/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 130 ns  Iteration: 3  Instance: /fpga_audiofx_tb/fpga_audiofx_inst/pll_inst/altpll_component/CYCLONEIII_ALTPLL/M5
+run
+# WARNING: No extended dataflow license exists
+run
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/aud_bclk
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/aud_adc_lrck
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/aud_adc_dat
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/clock
+vsim work.clock_generator
+# vsim work.clock_generator 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.clock_generator(rtl)
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.fpga_audiofx_tb
+# vsim work.fpga_audiofx_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.fpga_audiofx_tb(rtl)
+# Loading work.fpga_audiofx(rtl)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.fifo(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.i2s_slave(rtl)
+# Loading work.acodec_model(rtl)
+# ** Warning: Design size of 12210 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+vsim work.wm8731_configurator work.pll work.i2s_slave work.i2c_master work.fpga_audiofx_pkg work.fpga_audiofx work.fifo work.clock_generator work.fpga_audiofx_tb work.acodec_model
+# vsim work.wm8731_configurator work.pll work.i2s_slave work.i2c_master work.fpga_audiofx_pkg work.fpga_audiofx work.fifo work.clock_generator work.fpga_audiofx_tb work.acodec_model 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.pll(syn)
+# Loading work.i2s_slave(rtl)
+# Loading work.i2c_master(rtl)
+# ** Fatal: (vsim-3370) Top-level design unit 'fpga_audiofx_pkg' must be an ENTITY, CONFIGURATION , MODULE or PROGRAM
+#    Time: 0 ps  Iteration: 0  Root: / File: NOFILE
+# FATAL ERROR while loading design
+# Error loading design
+vsim work.wm8731_configurator work.pll work.i2s_slave work.i2c_master work.fpga_audiofx_pkg work.fpga_audiofx work.fifo work.clock_generator work.fpga_audiofx_tb work.acodec_model
+# vsim work.wm8731_configurator work.pll work.i2s_slave work.i2c_master work.fpga_audiofx_pkg work.fpga_audiofx work.fifo work.clock_generator work.fpga_audiofx_tb work.acodec_model 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.pll(syn)
+# Loading work.i2s_slave(rtl)
+# Loading work.i2c_master(rtl)
+# ** Fatal: (vsim-3370) Top-level design unit 'fpga_audiofx_pkg' must be an ENTITY, CONFIGURATION , MODULE or PROGRAM
+#    Time: 0 ps  Iteration: 0  Root: / File: NOFILE
+# FATAL ERROR while loading design
+# Error loading design
+# Load canceled
+vsim work.fpga_audiofx
+# vsim work.fpga_audiofx 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.fpga_audiofx(rtl)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.fifo(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.i2s_slave(rtl)
+# ** Warning: Design size of 11845 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+quit -sim
+vsim work.fpga_audiofx_tb
+# vsim work.fpga_audiofx_tb 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading work.fpga_audiofx_pkg(body)
+# Loading work.fpga_audiofx_tb(rtl)
+# Loading work.fpga_audiofx(rtl)
+# Loading work.pll(syn)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.mf_pllpack(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altpll(behavior)
+# Loading altera_mf.mf_cycloneiii_pll(vital_pll)
+# Loading altera_mf.mf_cda_mn_cntr(behave)
+# Loading altera_mf.mf_cda_scale_cntr(behave)
+# Loading work.wm8731_configurator(rtl)
+# Loading work.i2c_master(rtl)
+# Loading work.fifo(rtl)
+# Loading work.clock_generator(rtl)
+# Loading work.i2s_slave(rtl)
+# Loading work.acodec_model(rtl)
+# ** Warning: Design size of 12210 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+run
+# ** Note: Cyclone IV E PLL was reset
+#    Time: 0 ps  Iteration: 4  Instance: /fpga_audiofx_tb/fpga_audiofx_inst/pll_inst/altpll_component/CYCLONEIII_ALTPLL/M5
+# ** Note: Cyclone IV E PLL locked to incoming clock
+#    Time: 130 ns  Iteration: 3  Instance: /fpga_audiofx_tb/fpga_audiofx_inst/pll_inst/altpll_component/CYCLONEIII_ALTPLL/M5
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/clock
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/clock
+add wave -position insertpoint  \
+sim:/fpga_audiofx_tb/clock
+add wave  \
+sim:/fpga_audiofx_tb/aud_adc_dat \
+sim:/fpga_audiofx_tb/aud_adc_lrck \
+sim:/fpga_audiofx_tb/aud_bclk \
+sim:/fpga_audiofx_tb/aud_dac_dat \
+sim:/fpga_audiofx_tb/aud_dac_lrck \
+sim:/fpga_audiofx_tb/aud_xclk \
+sim:/fpga_audiofx_tb/i2c_sclk \
+sim:/fpga_audiofx_tb/i2c_sdat \
+sim:/fpga_audiofx_tb/reset \
+sim:/fpga_audiofx_tb/reset_n
+run

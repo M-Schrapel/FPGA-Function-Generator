@@ -1,0 +1,174 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.log2;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity pwm_calculator is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps + gain)
+		MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+		NUM_FUNCS	: integer := 5;	 -- Number of functions ( 0=sine, 1=triagle, 2=sawtooth, 3=rectangle, 4=custom)
+		CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+	);
+	port (
+		clock				: in  std_ulogic := '0';
+		reset				: in  std_ulogic := '0';
+		
+		start_calc		: in  std_ulogic := '0';
+		factor			: in  std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+		period			: in  std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+		period_on		: in  std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0) := (others => '0');
+		
+		result			: out std_ulogic_vector((integer(ceil(log2(real((CLOCK_MHZ*1000000)/PWM_STEPS)))))-1 downto 0);
+		data_avail		: out std_ulogic;
+	);
+end pwm_calculator;
+
+architecture rtl of rom_reader is
+
+-- Calculation signals
+signal start_calc_int	: std_logic := '0';
+signal div_calc_int		: std_logic := '0';
+signal mul_calc_int		: std_logic := '0';
+signal data_avail_int	: std_logic := '0';
+
+-- first calculation result (Multiplier)
+signal res_mul1			: std_logic_vector (28 downto 0) := (others => '0');
+-- second calculation result (Divider)
+signal res_div				: std_logic_vector (28 downto 0) := (others => '0');
+-- final calculation result (amplified)
+signal amplitude			: std_logic_vector (20 downto 0) := (others => '0');
+
+signal step_int			: std_logic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+signal frequency_int		: std_logic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0)  := (others => '0');
+signal factor_int			: std_logic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+signal pwm_value_int		: std_logic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+signal period_pwm_int	: std_logic_vector(9 downto 0)  := (others => '0');
+signal period_next_int	: std_logic_vector(19 downto 0) := (others => '0');
+
+
+-- Amplitude calculation
+component mul_pwm is
+	port
+	(
+		clken		: in  std_logic;
+		clock		: in  std_logic;
+		dataa		: in  std_logic_vector (9 downto 0);
+		datab		: in  std_logic_vector (19 downto 0);
+		result	: out std_logic_vector (28 downto 0)
+	);
+end component mul_pwm;
+
+component amp_mul is
+	port
+	(
+		clken		: in  std_logic;
+		clock		: in  std_logic;
+		dataa		: in  std_logic_vector (12 downto 0);
+		datab		: in  std_logic_vector (7 downto 0);
+		result	: out std_logic_vector (20 downto 0)
+	);
+end component amp_mul;
+
+
+component amp_div is
+	port
+	(
+		clken		: in  std_logic;
+		clock		: in  std_logic;
+		denom		: in  std_logic_vector (10 downto 0);
+		numer		: in  std_logic_vector (28 downto 0);
+		quotient	: out std_logic_vector (28 downto 0);
+		remain	: out std_logic_vector (10 downto 0)
+	);
+end component amp_div;
+
+begin
+data_avail	<=	data_avail_int;
+
+	ff:
+		process(reset,clock)
+			begin	
+				if reset = '1' then
+					count_clk		<= (others => '0');	
+				elsif rising_edge(clock) then
+					count_clk		<= count_clk_nxt;
+				end if;
+	end process ff;	
+
+	start_calculation:
+		process(start_calc)
+				begin	
+					if start_calc = '1' then
+						if data_avail_int = '0' then
+							count_clk_nxt	<= std_ulogic_vector( unsigned(count_clk) + 1 );
+						else
+							count_clk_nxt	<= count_clk;
+						end if;
+						start_calc_int	<= '1';
+					else
+						count_clk_nxt	<= (others => '0');
+						start_calc_int	<= '0';
+					end if;
+	end process start_calculation;	
+
+	cnt_comp:
+		process(count_clk)
+				begin	
+					if unsigned(count_clk) > 0 then
+						div_calc_int	<= '1';
+						if unsigned(count_clk) > 1 then
+							mul_calc_int	<= '1';
+						else
+							mul_calc_int	<= '0';
+						end if;
+						if unsigned(count_clk) > 2 then
+							data_avail_int	<= '1';
+						else
+							data_avail_int	<= '0';
+						end if;
+					else
+						div_calc_int		<= '0';
+						mul_calc_int		<= '0';
+						data_avail_int		<= '0';
+					end if;
+	end process start_calculation;	
+	
+-- calculations for amplitude of signal
+	fist_calc: mul_pwm 
+		port map(
+			clken		=> start_calc_int,
+			clock		=> clock,
+			dataa 	=> period_pwm_int,
+			datab		=> period_next_int,
+			result	=> res_mul1
+		 );	
+
+	second_calc: amp_div 
+		port map(
+			clken		=> div_calc_int,
+			clock		=> clock,
+			denom 	=> std_logic_vector(to_unsigned(PWM_STEPS*100,11)),
+			numer		=> res_mul1,
+			quotient	=> res_div,
+			remain	=> open -- dont use remain
+		 );	
+	 
+	final_calc: amp_mul 
+		port map(
+			clken		=> mul_calc_int,
+			clock		=> clock,
+			dataa 	=> res_div(12 downto 0),
+			datab		=> factor_int,
+			result	=> amplitude
+		 );	
+
+
+
+
+
+end rtl;

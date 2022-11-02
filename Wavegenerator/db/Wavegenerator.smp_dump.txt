@@ -1,0 +1,92 @@
+
+State Machine - |Wavegenerator|UART:uart_inst|UART_RX:uart_rx_i|rx_pstate
+Name rx_pstate.stopbit rx_pstate.paritybit rx_pstate.databits rx_pstate.startbit rx_pstate.idle 
+rx_pstate.idle 0 0 0 0 0 
+rx_pstate.startbit 0 0 0 1 1 
+rx_pstate.databits 0 0 1 0 1 
+rx_pstate.paritybit 0 1 0 0 1 
+rx_pstate.stopbit 1 0 0 0 1 
+
+State Machine - |Wavegenerator|UART:uart_inst|UART_TX:uart_tx_i|tx_pstate
+Name tx_pstate.stopbit tx_pstate.paritybit tx_pstate.databits tx_pstate.startbit tx_pstate.txsync tx_pstate.idle 
+tx_pstate.idle 0 0 0 0 0 0 
+tx_pstate.txsync 0 0 0 0 1 1 
+tx_pstate.startbit 0 0 0 1 0 1 
+tx_pstate.databits 0 0 1 0 0 1 
+tx_pstate.paritybit 0 1 0 0 0 1 
+tx_pstate.stopbit 1 0 0 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_error_cmd
+Name state_error_cmd.FIN state_error_cmd.R3 state_error_cmd.O state_error_cmd.R2 state_error_cmd.R1 state_error_cmd.E state_error_cmd.IDLE 
+state_error_cmd.IDLE 0 0 0 0 0 0 0 
+state_error_cmd.E 0 0 0 0 0 1 1 
+state_error_cmd.R1 0 0 0 0 1 0 1 
+state_error_cmd.R2 0 0 0 1 0 0 1 
+state_error_cmd.O 0 0 1 0 0 0 1 
+state_error_cmd.R3 0 1 0 0 0 0 1 
+state_error_cmd.FIN 1 0 0 0 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_custom_wr
+Name state_custom_wr.FIN state_custom_wr.PWM_VALUE_1 state_custom_wr.PWM_VALUE_0 state_custom_wr.ADDRESS_1 state_custom_wr.ADDRESS_0 state_custom_wr.IDLE_1 state_custom_wr.IDLE 
+state_custom_wr.IDLE 0 0 0 0 0 0 0 
+state_custom_wr.IDLE_1 0 0 0 0 0 1 1 
+state_custom_wr.ADDRESS_0 0 0 0 0 1 0 1 
+state_custom_wr.ADDRESS_1 0 0 0 1 0 0 1 
+state_custom_wr.PWM_VALUE_0 0 0 1 0 0 0 1 
+state_custom_wr.PWM_VALUE_1 0 1 0 0 0 0 1 
+state_custom_wr.FIN 1 0 0 0 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_finished
+Name state_finished.LF state_finished.CLR state_finished.IDLE 
+state_finished.IDLE 0 0 0 
+state_finished.CLR 0 1 1 
+state_finished.LF 1 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_requestdat
+Name state_requestdat.SENT state_requestdat.DATA_OUT state_requestdat.GET_DATA state_requestdat.REQUEST_TYPE state_requestdat.IDLE 
+state_requestdat.IDLE 0 0 0 0 0 
+state_requestdat.REQUEST_TYPE 0 0 0 1 1 
+state_requestdat.GET_DATA 0 0 1 0 1 
+state_requestdat.DATA_OUT 0 1 0 0 1 
+state_requestdat.SENT 1 0 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_phaseshift
+Name state_phaseshift.FIN state_phaseshift.WAVE_REF state_phaseshift.VAL_1 state_phaseshift.VAL_0 state_phaseshift.IDLE 
+state_phaseshift.IDLE 0 0 0 0 0 
+state_phaseshift.VAL_0 0 0 0 1 1 
+state_phaseshift.VAL_1 0 0 1 0 1 
+state_phaseshift.WAVE_REF 0 1 0 0 1 
+state_phaseshift.FIN 1 0 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_multiply
+Name state_multiply.FIN state_multiply.VAL_0 state_multiply.IDLE 
+state_multiply.IDLE 0 0 0 
+state_multiply.VAL_0 0 1 1 
+state_multiply.FIN 1 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_function
+Name state_function.FIN state_function.VAL_0 state_function.IDLE 
+state_function.IDLE 0 0 0 
+state_function.VAL_0 0 1 1 
+state_function.FIN 1 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state_frequency
+Name state_frequency.FIN state_frequency.VAL_1 state_frequency.VAL_0 state_frequency.IDLE 
+state_frequency.IDLE 0 0 0 0 
+state_frequency.VAL_0 0 0 1 1 
+state_frequency.VAL_1 0 1 0 1 
+state_frequency.FIN 1 0 0 1 
+
+State Machine - |Wavegenerator|uart_assembler:uart_asm|state
+Name state.CMD_ERROR state.TYPES_REQUEST state.CUSTOM_WRITE state.TYPE_PHASE state.TYPE_FUNC state.TYPE_MUL state.TYPE_FREQ state.TYPE_SELECT state.WAVE_SELECT state.CMD_FIN state.IDLE 
+state.IDLE 0 0 0 0 0 0 0 0 0 0 0 
+state.CMD_FIN 0 0 0 0 0 0 0 0 0 1 1 
+state.WAVE_SELECT 0 0 0 0 0 0 0 0 1 0 1 
+state.TYPE_SELECT 0 0 0 0 0 0 0 1 0 0 1 
+state.TYPE_FREQ 0 0 0 0 0 0 1 0 0 0 1 
+state.TYPE_MUL 0 0 0 0 0 1 0 0 0 0 1 
+state.TYPE_FUNC 0 0 0 0 1 0 0 0 0 0 1 
+state.TYPE_PHASE 0 0 0 1 0 0 0 0 0 0 1 
+state.CUSTOM_WRITE 0 0 1 0 0 0 0 0 0 0 1 
+state.TYPES_REQUEST 0 1 0 0 0 0 0 0 0 0 1 
+state.CMD_ERROR 1 0 0 0 0 0 0 0 0 0 1 

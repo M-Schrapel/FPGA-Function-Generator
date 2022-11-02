@@ -1,0 +1,24 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity mapping_unit is
+	generic (
+		PWM_STEPS	: integer := 512  -- Number of Steps
+	);
+	port (
+		enable		: in  std_ulogic;
+		amp			: in  std_ulogic_vector(7 downto 0);
+		last_period	: in  std_logic_vector(9 downto 0);
+		period_on	: in  std_logic_vector(9 downto 0);
+		
+		result		: out std_logic_vector(9 downto 0)
+    );
+end mapping_unit;
+
+architecture rtl of mapping_unit is
+
+begin
+
+end rtl;

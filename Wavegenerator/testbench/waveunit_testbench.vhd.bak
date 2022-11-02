@@ -1,0 +1,22 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity waveunit_testbench is
+	generic (
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 100;	 -- Amplitude Divider (100 steps)
+		MAX_FREQ		: integer := 300	 -- Maximum Frequency of Output in Hz
+	);
+end entity waveunit_testbench;
+
+
+architecture rtl of waveunit_testbench is
+
+begin
+
+
+end architecture rtl;

@@ -1,0 +1,139 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+entity pwm_generator_testbench is
+	generic (
+		PWM_STEPS		: integer := 20;  -- Number of Steps
+		CLOCK_MHZ		: integer := 50;   -- Clock signal in MHZ
+		MAX_FREQ			: integer := 512;	 -- Maximum Frequency of Output in Hz
+		NPERIODS			: integer := 3;
+		PERIODON			: integer := 10;
+		LPERIODON		: integer := 4;
+		LPERIOD			: integer := 8;
+		DELAYVALID		: integer := 5
+	);
+end pwm_generator_testbench;
+
+architecture rtl of pwm_generator_testbench is
+
+
+signal clock 				: std_ulogic := '0';
+signal reset				: std_ulogic := '0';
+		
+signal data_valid			: std_ulogic := '0';
+signal period_on			: std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+signal n_periods			: std_ulogic_vector(16 downto 0);
+signal last_period		: std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+signal last_period_on	: std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		
+signal data_request		: std_ulogic := '0';
+signal wave					: std_ulogic := '0';
+signal step_trigger		: std_ulogic := '0';
+signal delay_cnt			: std_ulogic_vector(integer(ceil(log2(real((DELAYVALID*1)))))-1 downto 0);
+signal delay_cnt_nxt		: std_ulogic_vector(integer(ceil(log2(real((DELAYVALID*1)))))-1 downto 0);
+
+component pwm_generator is
+	generic (
+		PWM_STEPS		: integer := 512;  -- Number of Steps
+		CLOCK_MHZ		: integer := 50;   -- Clock signal in MHZ
+		MAX_FREQ			: integer := 512	 -- Maximum Frequency of Output in Hz
+	);
+	port (
+		clock 			: in  std_ulogic;
+		reset				: in 	std_ulogic;
+		
+		data_valid		: in  std_ulogic;
+		period_on		: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		n_periods		: in  std_ulogic_vector(16 downto 0);
+		last_period		: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		last_period_on	: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		
+		data_request	: out std_ulogic;
+		step_trigger	: out std_ulogic;
+		wave				: out std_ulogic
+		
+    );
+end component pwm_generator;
+
+begin
+
+	gen_reset : process
+	begin
+		reset <= '1';
+		wait for 40 ns;
+		reset <= '0';
+		wait;
+	end process gen_reset;
+	
+	gen_clock : process
+	begin
+    clock <= '1';
+    wait for 10 ns;
+    clock <= '0';
+    wait for 10 ns;
+	end process gen_clock;
+
+	pwm : pwm_generator
+		generic map(
+		PWM_STEPS			=> PWM_STEPS,
+		CLOCK_MHZ			=> CLOCK_MHZ,
+		MAX_FREQ				=>	MAX_FREQ
+		)
+		port map(
+			clock 			=> clock,
+			reset				=> reset,
+			
+			data_valid		=> data_valid,
+			period_on		=> period_on,
+			n_periods		=> n_periods,
+			last_period		=> last_period,
+			last_period_on	=> last_period_on,
+		
+			data_request	=> data_request,
+			step_trigger	=> step_trigger,
+			wave				=> wave
+		 );	
+
+	ff:
+		process(reset,clock)
+				begin	
+					if reset = '1' then
+						delay_cnt	<= (others => '0');						
+					elsif rising_edge(clock) then
+						delay_cnt	<= delay_cnt_nxt;
+					end if;
+	end process ff;	
+		 
+	gen_comm:
+		process(data_request,delay_cnt)
+				begin	
+					if data_request = '1' then
+						if unsigned(delay_cnt) >= to_unsigned(DELAYVALID,delay_cnt'length) then
+							delay_cnt_nxt	<= delay_cnt;
+							data_valid		<= '1';
+							period_on		<= std_ulogic_vector(to_unsigned(PERIODON,period_on'length));
+							n_periods		<= std_ulogic_vector(to_unsigned(NPERIODS,n_periods'length));
+							last_period		<= std_ulogic_vector(to_unsigned(LPERIOD,last_period'length));
+							last_period_on	<= std_ulogic_vector(to_unsigned(LPERIODON,last_period_on'length));
+						else
+							delay_cnt_nxt		<= std_ulogic_vector(unsigned(delay_cnt)+1);	
+							data_valid		<= '0';
+							period_on		<= (others => '0');
+							n_periods		<= (others => '0');
+							last_period		<= (others => '0');
+							last_period_on	<= (others => '0');
+						end if;
+					else
+						delay_cnt_nxt		<= (others => '0');
+						data_valid			<= '0';
+						period_on			<= (others => '0');
+						n_periods			<= (others => '0');
+						last_period			<= (others => '0');
+						last_period_on		<= (others => '0');
+					end if;
+	end process gen_comm;	
+	
+	
+end rtl;

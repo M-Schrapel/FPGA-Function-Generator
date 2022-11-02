@@ -1,0 +1,221 @@
+# -------------------------------------------------------------------------- #
+#
+# Copyright (C) 1991-2013 Altera Corporation
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and its AMPP partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, Altera MegaCore Function License 
+# Agreement, or other applicable license agreement, including, 
+# without limitation, that your use is for the sole purpose of 
+# programming logic devices manufactured by Altera and sold by 
+# Altera or its authorized distributors.  Please refer to the 
+# applicable agreement for further details.
+#
+# -------------------------------------------------------------------------- #
+#
+# Quartus II 64-Bit
+# Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+# Date created = 07:45:27  August 07, 2018
+#
+# -------------------------------------------------------------------------- #
+#
+# Notes:
+#
+# 1) The default values for assignments are stored in the file:
+#		Wavegenerator_assignment_defaults.qdf
+#    If this file doesn't exist, see file:
+#		assignment_defaults.qdf
+#
+# 2) Altera recommends that you do not modify this file. This
+#    file is updated automatically by the Quartus II software
+#    and any changes you make may be lost or overwritten.
+#
+# -------------------------------------------------------------------------- #
+
+
+set_global_assignment -name FAMILY "Cyclone V"
+set_global_assignment -name DEVICE 5CSEBA6U23I7DK
+set_global_assignment -name TOP_LEVEL_ENTITY Wavegenerator
+set_global_assignment -name ORIGINAL_QUARTUS_VERSION "13.0 SP1"
+set_global_assignment -name PROJECT_CREATION_TIME_DATE "07:45:27  AUGUST 07, 2018"
+set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
+set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP "-40"
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 100
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 2
+set_global_assignment -name EDA_SIMULATION_TOOL "ModelSim (Verilog)"
+set_global_assignment -name EDA_TIME_SCALE "1 ps" -section_id eda_simulation
+set_global_assignment -name EDA_OUTPUT_DATA_FORMAT "VERILOG HDL" -section_id eda_simulation
+set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
+set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SEARCH_PATH "c:\\altera\\13.0sp1\\wavegenerator\\libaries"
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "3.3-V LVTTL"
+
+set_global_assignment -name NUM_PARALLEL_PROCESSORS 2
+
+set_location_assignment PIN_AG13 -to uart_rxd
+set_location_assignment PIN_AF13 -to uart_txd
+set_location_assignment PIN_Y13 -to clock
+set_location_assignment PIN_Y24 -to reset
+
+set_location_assignment PIN_W15 -to wave[0]
+set_location_assignment PIN_AA24 -to wave[1]
+set_location_assignment PIN_V16 -to wave[2]
+set_location_assignment PIN_D11 -to wave[3]
+set_location_assignment PIN_D8 -to wave[4]
+set_location_assignment PIN_AH13 -to wave[5]
+set_location_assignment PIN_AF7 -to wave[6]
+set_location_assignment PIN_AH14 -to wave[7]
+set_location_assignment PIN_AF4 -to wave[8]
+set_location_assignment PIN_AH3 -to wave[9]
+set_location_assignment PIN_AD5 -to wave[10]
+set_location_assignment PIN_AG14 -to wave[11]
+set_location_assignment PIN_AE23 -to wave[12]
+set_location_assignment PIN_AE6 -to wave[13]
+set_location_assignment PIN_AD23 -to wave[14]
+set_location_assignment PIN_AE24 -to wave[15]
+set_location_assignment PIN_D12 -to wave[16]
+set_location_assignment PIN_AD20 -to wave[17]
+set_location_assignment PIN_AE15 -to wave[18]
+set_location_assignment PIN_AF17 -to wave[19]
+set_location_assignment PIN_C12 -to wave[20]
+set_location_assignment PIN_AD17 -to wave[21]
+set_location_assignment PIN_AC23 -to wave[22]
+set_location_assignment PIN_AC22 -to wave[23]
+set_location_assignment PIN_AH8 -to wave[24]
+set_location_assignment PIN_AB23 -to wave[25]
+set_location_assignment PIN_AG8 -to wave[26]
+set_location_assignment PIN_U13 -to wave[27]
+set_location_assignment PIN_U14 -to wave[28]
+set_location_assignment PIN_AG9 -to wave[29]
+set_location_assignment PIN_AG10 -to wave[30]
+set_location_assignment PIN_Y19 -to wave[31]
+set_location_assignment PIN_W11 -to wave[32]
+set_location_assignment PIN_AA19 -to wave[33]
+set_location_assignment PIN_AA18 -to wave[34]
+set_location_assignment PIN_W14 -to wave[35]
+set_location_assignment PIN_Y18 -to wave[36]
+set_location_assignment PIN_Y17 -to wave[37]
+set_location_assignment PIN_AB25 -to wave[38]
+set_location_assignment PIN_Y11 -to wave[39]
+
+set_location_assignment PIN_AE17 -to wave[40]
+set_location_assignment PIN_AE19 -to wave[41]
+set_location_assignment PIN_AE20 -to wave[42]
+set_location_assignment PIN_AG15 -to wave[43]
+set_location_assignment PIN_AF20 -to wave[44]
+set_location_assignment PIN_AF18 -to wave[45]
+set_location_assignment PIN_AH18 -to wave[46]
+set_location_assignment PIN_AG18 -to wave[47]
+set_location_assignment PIN_AH19 -to wave[48]
+set_location_assignment PIN_AG19 -to wave[49]
+set_location_assignment PIN_AF21 -to wave[50]
+set_location_assignment PIN_AG20 -to wave[51]
+set_location_assignment PIN_AE22 -to wave[52]
+set_location_assignment PIN_AF22 -to wave[53]
+set_location_assignment PIN_AA20 -to wave[54]
+set_location_assignment PIN_AH23 -to wave[55]
+set_location_assignment PIN_AG21 -to wave[56]
+set_location_assignment PIN_AH21 -to wave[57]
+set_location_assignment PIN_AH22 -to wave[58]
+set_location_assignment PIN_AG24 -to wave[59]
+set_location_assignment PIN_AF23 -to wave[60]
+set_location_assignment PIN_AG23 -to wave[61]
+set_location_assignment PIN_AF25 -to wave[62]
+set_location_assignment PIN_AH24 -to wave[63]
+set_location_assignment PIN_AH26 -to wave[64]
+set_location_assignment PIN_AG25 -to wave[65]
+set_location_assignment PIN_AH27 -to wave[66]
+set_location_assignment PIN_AG26 -to wave[67]
+set_location_assignment PIN_AF27 -to wave[68]
+set_location_assignment PIN_AE25 -to wave[69]
+set_location_assignment PIN_AF28 -to wave[70]
+set_location_assignment PIN_AG28 -to wave[71]
+
+set_location_assignment PIN_AD26 -to wave[72]
+set_location_assignment PIN_AA15 -to wave[73]
+set_location_assignment PIN_AC24 -to wave[74]
+set_location_assignment PIN_Y15 -to wave[75]
+set_location_assignment PIN_AB26 -to wave[76]
+set_location_assignment PIN_AA11 -to wave[77]
+set_location_assignment PIN_AA13 -to wave[78]
+set_location_assignment PIN_AA26 -to wave[79]
+
+set_global_assignment -name VHDL_FILE vhdl/Wavegenerator.vhd
+set_global_assignment -name VHDL_FILE vhdl/wave_updatelogic.vhd
+set_global_assignment -name VHDL_FILE vhdl/rom_reader.vhd
+set_global_assignment -name VHDL_FILE vhdl/waveunit.vhd
+set_global_assignment -name VHDL_FILE vhdl/rect_generator.vhd
+set_global_assignment -name VHDL_FILE vhdl/pwm_calculator.vhd
+set_global_assignment -name VHDL_FILE vhdl/wavecounter.vhd
+set_global_assignment -name VHDL_FILE vhdl/counter.vhd
+set_global_assignment -name VHDL_FILE vhdl/ext_communicator.vhd
+set_global_assignment -name VHDL_FILE vhdl/uart_assembler.vhd
+set_global_assignment -name VHDL_FILE vhdl/gain_unit.vhd
+set_global_assignment -name VHDL_FILE vhdl/last_step_calc.vhd
+set_global_assignment -name VHDL_FILE vhdl/mapping_unit.vhd
+set_global_assignment -name VHDL_FILE testbench/Wavegenerator_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/wave_unit_rom_uart_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/wave_updatelogic_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/wave_rom_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/wave_unit_rom_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/waveunit_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/rom_reader_testbench.vhd
+set_global_assignment -name VHDL_FILE vhdl/pwm_generator.vhd
+set_global_assignment -name VHDL_FILE testbench/pwm_generator_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/pwm_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/counter_testbench.vhd
+set_global_assignment -name VHDL_FILE testbench/pwm_calculator_testbench.vhd
+set_global_assignment -name VHDL_FILE libaries/function_pkg.vhd -library work
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/pll.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/sine_ROM_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/triangle_ROM_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/sawtooth_ROM_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/sine_ROM_1024.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/triangle_ROM_1024.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/sawtooth_ROM_1024.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/custom_RAM_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/custom_RAM_1024.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_512_f_50.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_512_f_100.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_512_f_350.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/mul_pwm.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/amp_div.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/amp_mul.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_50.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_100.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/period_ROM_s_1024_f_350.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/mul_100.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/step_div.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/mapping_div.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/mul_period.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/lut_phase_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/lut_phase_1024.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/phase_LUT_512.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/phase_LUT_1024.qip
+set_global_assignment -name VHDL_FILE vhdl/external/uart_tx.vhd
+set_global_assignment -name VHDL_FILE vhdl/external/uart_rx.vhd
+set_global_assignment -name VHDL_FILE vhdl/dc_generator.vhd
+set_global_assignment -name VHDL_FILE vhdl/external/uart_parity.vhd
+set_global_assignment -name VHDL_FILE vhdl/external/uart.vhd
+set_global_assignment -name SDC_FILE Wavegenerator.sdc
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/pll_50.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/pll_100.qip
+set_global_assignment -name QIP_FILE vhdl/Cyclone_II_plugins/pll_350.qip
+set_global_assignment -name QIP_FILE output_files/pll_20.qip
+set_global_assignment -name VHDL_FILE vhdl/div_100.vhd
+set_global_assignment -name VHDL_FILE vhdl/div_step.vhd
+set_global_assignment -name VHDL_FILE vhdl/div_mapping_1024.vhd
+set_global_assignment -name VHDL_FILE vhdl/period_mul.vhd
+set_global_assignment -name VHDL_FILE vhdl/clk_communicator.vhd
+set_global_assignment -name CDF_FILE output_files/Wavegenerator.cdf
+set_global_assignment -name VHDL_FILE vhdl/wave_updatelogic2.vhd
+set_global_assignment -name VHDL_FILE vhdl/wave_updatelogic_old.vhd
+set_location_assignment PIN_V15 -to reset_out
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

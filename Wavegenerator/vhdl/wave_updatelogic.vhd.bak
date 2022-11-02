@@ -1,0 +1,79 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.log2;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+
+entity wave_updatelogic is
+	generic (
+		NUM_PORTS	: integer := 1;  	 -- Number of Ports
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps + gain)
+		MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+		NUM_FUNCS	: integer := 5;	 -- Number of functions ( 0=sine, 1=triagle, 2=sawtooth, 3=rectangle, 4=custom)
+		CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+	);
+	port(
+		clock									: in  std_ulogic := '0';
+		reset									: in  std_ulogic := '0';
+		-- waveunit communication
+		enable_request_wave				: out std_ulogic_vector(NUM_PORTS-1 downto 0);
+		-- incoming request
+		data_request_wave					: in  std_ulogic_vector(NUM_PORTS-1 downto 0);
+		mult_request_wave					: in  std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0);
+		pwm_step_request_wave			: in  std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0);
+		freq_request_wave					: in  std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0);
+		function_request_wave			: in  std_ulogic_vector(integer(ceil(log2(real(NUM_FUNCS*1))))-1 downto 0);
+		-- response 
+		data_avail_response_wave		: out std_ulogic_vector(NUM_PORTS-1 downto 0);
+		mult_response_wave				: out std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0);
+		period_on_response_wave			: out std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		n_periods_response_wave			: out std_ulogic_vector(16 downto 0);
+		last_period_response_wave		: out std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		last_period_on_response_wave	: out std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		freq_response_wave				: out std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0);
+		function_response_wave			: out std_ulogic_vector(integer(ceil(log2(real(NUM_FUNCS*1))))-1 downto 0);
+		pwm_step_response_wave			: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0);
+	
+		-- rom reader communication
+		
+		-- requesting data
+		data_request_rom					: out std_ulogic := '0';
+		function_request_rom				: out std_ulogic_vector(NUM_FUNCS-1 downto 0) := (others => '0');
+		frequency_request_rom			: out std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0)  := (others => '0');
+		step_request_rom					: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		mult_request_rom					: out std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0) := (others => '0');
+		-- response of rom
+		data_avail_response_rom			: in  std_ulogic;
+		period_on_response_rom			: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		n_periods_response_rom			: in  std_ulogic_vector(16 downto 0);
+		last_period_response_rom		: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		last_period_on_response_rom	: in  std_ulogic_vector(integer(ceil(log2(real((PWM_STEPS*1)))))-1 downto 0);
+		-- write data to custom rom
+		write_custom_request_rom		: out std_ulogic := '0';
+		address_request_rom				: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		pwm_value_request_rom			: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		
+		--communication with external data
+		ext_request							: in  std_ulogic := '0';
+		wave_unit_select					: in  std_ulogic_vector(integer(ceil(log2(real((NUM_PORTS*1)))))-1 downto 0)  := (others => '0');
+		function_select					: in  std_ulogic_vector(NUM_FUNCS downto 0) := (others => '0');
+		frequency_select					: in  std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1)))) downto 0)  := (others => '0');
+		mult_select							: in  std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1)))) downto 0)  := (others => '0');
+		phase_reference_select			: in  std_ulogic_vector(integer(ceil(log2(real(NUM_PORTS*1)))) downto 0)  := (others => '0');
+		phase_value_select				: in  std_ulogic_vector(8 downto 0)  := (others => '0');
+		ack_ext								: out std_ulogic := '0'
+	);
+end wave_updatelogic;
+
+architecture rtl of wave_updatelogic is
+
+
+begin
+
+
+
+end rtl;

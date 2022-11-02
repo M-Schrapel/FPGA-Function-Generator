@@ -1,0 +1,128 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+use ieee.math_real.all;
+
+library work;
+use work.function_pkg.all;
+
+entity ext_communicator is
+	generic (
+      BAUD_RATE   : integer := 115200; -- baud rate value
+      PARITY_BIT  : string  := "none"; -- type of parity: "none", "even", "odd", "mark", "space"
+		NUM_PORTS	: integer := 1;  	 -- Number of Ports
+		PWM_STEPS	: integer := 512;  -- Number of Steps
+		CLOCK_MHZ	: integer := 50;   -- Clock signal in MHZ
+		AMP_STEPS	: integer := 255;	 -- Amplitude Divider (100 steps)
+		MAX_FREQ		: integer := 512;	 -- Maximum Frequency of Output in Hz
+		NUM_FUNCS	: integer := 5;	 -- Number of functions ( 0=sine, 1=triagle, 2=sawtooth, 3=rectangle, 4=custom)
+		CALC_TICKS	: integer := 5		 -- internal number of clocks until result is valid
+	);
+	port(
+		clock							: in	std_ulogic;
+		reset							: in	std_ulogic;
+      uart_rxd						: in  std_ulogic;
+		uart_txd						: out std_ulogic;
+		
+		-- set single wave unit with UART data
+		ext_request					: out std_ulogic := '0';
+		type_request				: out	std_ulogic_vector(integer(ceil(log2(real((5)))))-1 downto 0);
+		-- 0: function select
+		-- 1: frequency select
+		-- 2: multiplier select
+		-- 3: phase select
+		-- 4: request data
+		wave_unit_select			: out std_ulogic_vector(max(integer(ceil(log2(real((NUM_PORTS*1))))),1) downto 0)  := (others => '0');
+		function_select			: out std_ulogic_vector(max(integer(ceil(log2(real(NUM_FUNCS))))-1,1) downto 0)  := (others => '0');
+		frequency_select			: out std_ulogic_vector(integer(ceil(log2(real(MAX_FREQ*1))))-1 downto 0)  := (others => '0');
+		mult_select					: out std_ulogic_vector(integer(ceil(log2(real(AMP_STEPS*1))))-1 downto 0)  := (others => '0');
+		phasereference_select	: out std_ulogic_vector(max(integer(ceil(log2(real(NUM_PORTS*1)))),1) downto 0)  := (others => '0');
+		phase_value_select		: out std_ulogic_vector(8 downto 0)  := (others => '0');
+		
+		-- write to custom RAM
+		write_custom_request		: out std_ulogic := '0';
+		address_request			: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		pwm_value_request			: out std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0');
+		
+		-- data was written
+		ack_ext						: in  std_ulogic := '0';
+		-- for requesting data via UART
+		data_back					: in  std_ulogic_vector(integer(ceil(log2(real(PWM_STEPS*1))))-1 downto 0) := (others => '0')
+		
+	);
+end ext_communicator;
+
+architecture rtl of ext_communicator is
+
+signal uart_rxd_int	: std_logic;
+signal uart_txd_int	: std_logic;
+
+signal clock_int		: std_logic;
+signal reset_int		: std_logic;
+
+signal data_rx    	: std_logic_vector(7 downto 0); 
+signal valid_rx    	: std_logic; 
+signal error_rx	 	: std_logic; 
+
+signal data_tx    	: std_logic_vector(7 downto 0); 
+signal valid_tx    	: std_logic; 
+signal error_tx	 	: std_logic; 
+
+component UART is
+    Generic (
+        CLK_FREQ      : integer := 50e6;   -- system clock frequency in Hz
+        BAUD_RATE     : integer := 115200; -- baud rate value
+        PARITY_BIT    : string  := "none"; -- type of parity: "none", "even", "odd", "mark", "space"
+        USE_DEBOUNCER : boolean := True    -- enable/disable debouncer
+    );
+    Port (
+        CLK         : in  std_logic; -- system clock
+        RST         : in  std_logic; -- high active synchronous reset
+        -- UART INTERFACE
+        UART_TXD    : out std_logic; -- serial transmit data
+        UART_RXD    : in  std_logic; -- serial receive data
+        -- USER DATA INPUT INTERFACE
+        DATA_IN     : in  std_logic_vector(7 downto 0); -- input data
+        DATA_SEND   : in  std_logic; -- when DATA_SEND = 1, input data are valid and will be transmit
+        BUSY        : out std_logic; -- when BUSY = 1, transmitter is busy and you must not set DATA_SEND to 1
+        -- USER DATA OUTPUT INTERFACE
+        DATA_OUT    : out std_logic_vector(7 downto 0); -- output data
+        DATA_VLD    : out std_logic; -- when DATA_VLD = 1, output data are valid
+        FRAME_ERROR : out std_logic  -- when FRAME_ERROR = 1, stop bit was invalid
+    );
+end component UART;
+
+begin
+
+uart_rxd_int	<= std_logic(uart_rxd);
+uart_txd			<= std_ulogic(uart_txd_int);
+
+clock_int		<= std_logic(clock);
+reset_int		<= std_logic(reset);
+
+	uart_inst : UART
+    generic map (
+        CLK_FREQ    => CLOCK_MHZ*1000000,
+        BAUD_RATE   => BAUD_RATE,
+        PARITY_BIT  => PARITY_BIT
+    )
+    port map (
+        CLK         => clock_int,
+        RST         => reset_int,
+        -- UART INTERFACE
+        UART_TXD    => uart_txd_int,
+        UART_RXD    => uart_rxd_int,
+        -- USER DATA OUTPUT INTERFACE
+        DATA_OUT    => data_rx,
+        DATA_VLD    => valid_rx,
+        FRAME_ERROR => error_rx,
+        -- USER DATA INPUT INTERFACE
+        DATA_IN     => data_tx,
+        DATA_SEND   => valid_tx,
+        BUSY        => error_tx
+    );
+	 
+	 
+	 
+	 
+end rtl;
