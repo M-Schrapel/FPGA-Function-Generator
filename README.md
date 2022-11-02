@@ -8,7 +8,7 @@ In addition to vibration, electrical muscle stimulation (EMS) is becoming increa
 
 To ensure mobile use and in-depth exploration of tactile effects, we have developed *MultiWave* - a fully customizable and scalable function generator. This open-source project was developed to provide HCI researchers with a mobile function generator to study tactile effects on complex actuator grids.  With MultiWave, amplitude, phase, frequency, and waveform can be freely adjusted to discover new effects on human skin. The various parameters can be set via UART with simple commands. Depending on your FPGA (default: DE10-Nano), the signal quantization or PWM steps (default: 10Bit), the amplitude gain quantization (default: 8Bit), the number of actuators (default: 80 ports) and the number of different periodic signals (default: 128 functions including sine, triangle, square, sawtooth) can be freely defined. In addition, the phase of each output signal can be adjusted in relation to any other output.
 
-<img src = “/Images/Board_view.png”>
+![MultiWave Prototype](/Images/Board_view.png)
 
 ## Application example
 
@@ -30,8 +30,7 @@ To avoid overloading the FPGA outputs you have to control your actuators via MOS
 It is recommended to smooth the outputs via capacitors to attentuate high frequency noise for voice coil actuators. 
 You can find further information in [*our paper*](MultiWave.pdf).
 
-<img src = “/Images/BSB_wave.png”>
-
+![Block Diagram](/Images/BSB_wave.png)
 
 ## Award & Research recognition
 
