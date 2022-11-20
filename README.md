@@ -10,15 +10,6 @@ To ensure mobile use and in-depth exploration of tactile effects, we have develo
 
 ![MultiWave Prototype](/Images/Board_view.png)
 
-## Application example
-
-With MultiWave you can experience virtual worlds immersively everywhere. 
-We created a virtual world and a mobile bodysuit to explore the possibilities of MultiWave. 
-On *"Sensation Island"* we showed how it feels to take a waterfall shower and fall from great heights. 
-Would you like to experience this too? Click the image below to watch our video and see how virtual worlds can merge with reality in the future.
-
-[<img src="Images/MultiWaveVR.jpg">](https://www.youtube.com/watch?v=o4MZdf-5J6U "Video:  MultiWave: A Mobile Function Generator for Haptic Feedback in VR")
-
 ## How it works
 
 The picture below shows a simplified overview of the structure. 
@@ -32,7 +23,7 @@ You can find further information in [*our paper*](MultiWave.pdf).
 
 ![Block Diagram](/Images/BSB_wave.png)
 
-## Award & Research recognition
+## Recognition in Industry & Research
 
 MultiWave was part of the _InnovateFPGA Design Contest_ in 2019 and successfully awarded with the [*Regional Final Bronze Award*](https://www.hci.uni-hannover.de/de/institut/news-und-events/news/aktuelles-detailansicht/news/regional-final-bronze-award-at-innovatefpga-2019). 
 We are very honored to receive this award. Furthermore, we are pleased that Dr. Kaul was able to successfully use MultiWave for his research on tactile feedback around the head. 
